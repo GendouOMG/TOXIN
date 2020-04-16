@@ -13,31 +13,33 @@
 	<body>
 		<header class="head-space">
 			<h1 class="visually-hidden">Меню сайта</h1>
-			<a href="#" class="head-logo">TOXIN</a>
+			<a href="#" class="logotype">
+				<span class="logotype__img"></span>
+			</a>
 			<ul class="nav-menu">
-				<li class="nav-menu">
-					<a href="#">О нас</a>
+				<li class="nav-menu__element">
+					<a href="#" class="nav-menu__element-link">О нас</a>
 				</li>
-				<li class="nav-menu">
-					<a href="#">Услуги</a>
+				<li class="nav-menu__element">
+					<a href="#" class="nav-menu__element-link">Услуги</a>
 				</li>
-				<li class="nav-menu">
-					<a href="#">Вакансии</a>
+				<li class="nav-menu__element">
+					<a href="#" class="nav-menu__element-link">Вакансии</a>
 				</li>
-				<li class="nav-menu">
-					<a href="#">Новости</a>
+				<li class="nav-menu__element">
+					<a href="#" class="nav-menu__element-link">Новости</a>
 				</li>
-				<li class="nav-menu">
-					<a href="#">Соглашения</a>
+				<li class="nav-menu__element">
+					<a href="#" class="nav-menu__element-link">Соглашения</a>
 				</li>
-				<li class="nav-menu">
-					<a href="#">Войти</a>
+				<li class="nav-menu__element">
+					<a href="#" class="nav-menu__element-link">Войти</a>
 				</li>
-				<li class="nav-menu">
+				<li class="nav-menu__element">
 					<a href="#">Зарегистрироваться</a>
 				</li>
-				<li class="nav-menu">
-					<a href="#"></a>
+				<li class="nav-menu__element">
+					<a href="#" class="nav-menu__element-link"></a>
 				</li>
 			</ul>
 		</header>
@@ -46,26 +48,81 @@
 			<h1 class="visually-hidden">Окно заказов</h1>
 
 			<div class="room-search">
-				<h2 class="room-search--headline">Найдём номера под ваши пожелания</h2>
-				<ul class="room-search--data">
-					<li class="room-search--data-unit">
-						<p class="room-search--data-headline">Прибытие</p>
+				<h2 class="room-search__headline">Найдём номера под ваши пожелания</h2>
+				<ul class="room-search__data">
+					<li class="room-search__data-unit">
+						<p class="room-search__data-headline">Прибытие</p>
 						<form>ДД.ММ.ГГГГ</form>
 					</li>
-					<li class="room-search--data-unit">
-						<p class="room-search--data-headline">Выезд</p>
+					<li class="room-search__data-unit">
+						<p class="room-search__data-headline">Выезд</p>
 						<form>ДД.ММ.ГГГГ</form>
 					</li>
-					<li class="room-search--data-unit">
-						<p class="room-search--data-headline">Гости</p>
+					<li class="room-search__data-unit">
+						<p class="room-search__data-headline">Гости</p>
 						<form>Сколько гостей</form>
 					</li>
 				</ul>
-				<a href="#" class="room-search--order-button">Подобрать номер</a>
+				<a href="#" class="room-search__order-button">Подобрать номер</a>
 			</div>
 
-			<p class="order-section--slogan">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>			
+			<p class="order-section__slogan">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>			
 		</section>
-
+		
+		<footer class="footer-space">
+			<ul class="footer-navigation">
+				<li class="footer-navigation__element">
+					<a href="#" class="logotype">
+						<span class="logotype__img"></span>
+					</a>
+					<p class="footer-navigation__text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+				</li>
+				<li class="footer-navigation__element">
+					<h2 class="footer-navigation__headline">Навигация</h2>
+					<ul class="footer-navigation__sublist">
+						<li class="footer-navigation__sublist-element">О нас</li>
+						<li class="footer-navigation__sublist-element">Новости</li>
+						<li class="footer-navigation__sublist-element">Служба поддержки</li>
+						<li class="footer-navigation__sublist-element">Услуги</li>
+					</ul>
+				</li>
+				<li class="footer-navigation__element">
+					<h2 class="footer-navigation__headline">О нас</h2>
+					<ul class="footer-navigation__sublist">
+						<li class="footer-navigation__sublist-element">О сервисе</li>
+						<li class="footer-navigation__sublist-element">Наша команда</li>
+						<li class="footer-navigation__sublist-element">Вакансии</li>
+						<li class="footer-navigation__sublist-element">Инвесторы</li>
+					</ul>
+				</li>
+				<li class="footer-navigation__element">
+					<h2 class="footer-navigation__headline">Служба поддержки</h2>
+					<ul class="footer-navigation__sublist">
+						<li class="footer-navigation__sublist-element">Соглашения</li>
+						<li class="footer-navigation__sublist-element">Сообщества</li>
+						<li class="footer-navigation__sublist-element">Связь с нами</li>
+					</ul>
+				</li>
+				<li class="footer-navigation__element">
+					<h2 class="footer-navigation__headline">Подписка</h2>
+					<p class="footer-navigation__text">Получайте специальные предложения и новости сервиса</p>
+					<form class="footer-navigation__email-form">Email</form>
+				</li>
+			</ul>
+			<div class="footer-space__bottom-line">
+				<p class="footer-space__license"></p>
+				<ul class="social-networks">
+					<li class="social-networks__element">
+						<a href="#" class="social-networks__element-link"></a>
+					</li>
+					<li class="social-networks__element">
+						<a href="#" class="social-networks__element-link"></a>
+					</li>
+					<li class="social-networks__element">
+						<a href="#" class="social-networks__element-link"></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
 	</body>
 </html>
