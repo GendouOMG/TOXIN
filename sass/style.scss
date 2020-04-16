@@ -2,7 +2,8 @@
 body {
 	padding: 0;
 	margin: 0;
-	font-family: Open Sans, Arial, sans-serif;
+
+	font-family: Quicksand, OpenSans, sans-serif;
 }
 
 // $mobile-width: 320px;
@@ -11,3 +12,5 @@ body {
 
 @import "visually-hidden.scss";
 @import "logotype.scss";
+@import "head-space.scss";
+@import "nav-menu.scss";

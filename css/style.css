@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: Open Sans, Arial, sans-serif; }
+  font-family: Quicksand, OpenSans, sans-serif; }
 
 .visually-hidden {
   position: absolute;
@@ -24,3 +24,38 @@ body {
   height: 40px;
   display: inline-block;
   background: url("../img/logotype_img.png") center center no-repeat; }
+
+.head-space {
+  width: 1440px;
+  height: 70px;
+  display: flex; }
+
+.nav-menu {
+  width: auto;
+  height: auto;
+  display: flex;
+  list-style: none;
+  text-decoration: none; }
+
+.nav-menu__element {
+  margin-right: 30px; }
+
+.nav-menu__element-link {
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #1F2041;
+  opacity: 0.5; }
+
+.nav-menu__element-link--active {
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  color: #1F2041;
+  opacity: 0.75; }
