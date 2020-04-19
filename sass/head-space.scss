@@ -1,6 +1,16 @@
 .head-space{
-	width: 1440px;
+	margin: 0 auto;
+	padding: 0;
+
+	max-width: 1440px;
 	height: 70px;
 
 	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.logotype{
+		margin: 15px;
+		padding: 0;
+	}
 }

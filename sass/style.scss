@@ -3,7 +3,8 @@ body {
 	padding: 0;
 	margin: 0;
 
-	font-family: Quicksand, OpenSans, sans-serif;
+	font-family: 'Quicksand', 'Open Sans', sans-serif;
+	
 }
 
 // $mobile-width: 320px;
@@ -14,3 +15,4 @@ body {
 @import "logotype.scss";
 @import "head-space.scss";
 @import "nav-menu.scss";
+@import "registration-menu.scss";

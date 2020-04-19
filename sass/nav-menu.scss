@@ -1,8 +1,14 @@
 .nav-menu {
+	margin: 0;
+	padding: 0;
+
 	width: auto;
+	max-width: 730px;
 	height: auto;
 
 	display: flex;
+	flex-grow: 1;
+	justify-content: flex-end;
 	
 	list-style: none;
 
@@ -20,7 +26,8 @@
 
 .nav-menu__element {
 
-	margin-right: 30px;
+	margin:0 10px;
+	padding: 0;
 
 	// text-decoration: none;
 	// font-style: normal;
@@ -33,13 +40,16 @@
 }
 
 .nav-menu__element-link {
+	margin: 0;
+	padding: 0;
+
 	text-decoration: none;
 	
 	font-family: Montserrat, sans-serif;
 	font-style: normal;
 	// text-align: center;
 	font-size: 14px;
-	line-height: 14px;
+	line-height: 17px;
 	font-weight: 400;
 	// text-transform: uppercase;
 	color: #1F2041;
@@ -47,13 +57,16 @@
 }
 
 .nav-menu__element-link--active {
+	margin: 0;
+	padding: 0;
+
 	text-decoration: none;
 
 	font-family: Montserrat, sans-serif;
 	font-style: normal;
 	// text-align: center;
 	font-size: 14px;
-	line-height: 14px;
+	line-height: 17px;
 	font-weight: 700;
 	// text-transform: uppercase;
 	color: #1F2041;

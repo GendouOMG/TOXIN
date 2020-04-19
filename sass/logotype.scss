@@ -1,5 +1,9 @@
 .logotype {
+	margin: 0;
+	padding: 0;
+	
 	width: 105px;
+	min-width: 105px;
 	height: 40px;
 
 	display: inline-block;
@@ -14,3 +18,4 @@
 	background: url("../img/logotype_img.png") center center no-repeat;
 
 }
+
