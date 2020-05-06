@@ -173,3 +173,128 @@ body {
   color: #FFFFFF;
   opacity: 1;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+
+.order-section {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1440px;
+  height: 830px;
+  background: url("../img/index-background.jpg") center center no-repeat; }
+  .order-section .room-search {
+    margin: 70px 140px;
+    padding: 0; }
+
+.order-section__slogan {
+  margin: 20px 135px;
+  padding: 0;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-style: normal;
+  text-align: right;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #1F2041;
+  opacity: 0.75; }
+
+.room-search {
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+  width: 380px;
+  height: 372px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px; }
+
+.room-search__headline {
+  margin: 40px 30px 20px 30px;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Quicksand', 'Open Sans';
+  font-style: normal;
+  text-align: left;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #1F2041; }
+
+.room-search__data {
+  margin: 0 30px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  text-decoration: none; }
+
+.room-search__data-unit {
+  margin: 0;
+  padding: 0;
+  flex-basis: 145px;
+  flex-grow: 1; }
+
+.room-search__data-unit:first-child {
+  margin: 0 20px 20px 0; }
+
+.room-search__data-headline {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  font-style: normal;
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1F2041; }
+
+.room-search__data-form {
+  margin: 0;
+  padding: 15px;
+  font-family: Montserrat;
+  font-style: normal;
+  text-align: left;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px; }
+
+.room-search__order-button {
+  margin: 30px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 320px;
+  height: 44px;
+  text-decoration: none;
+  vertical-align: middle;
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px; }
+
+.footer-space {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
