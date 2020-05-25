@@ -1,9 +1,8 @@
 .defaultRadioButtons {
     margin: 0;
     padding: 0;
-
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
 }
 
 .defaultRadioButtons__headline {
@@ -20,6 +19,22 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	color: opacify($DarkShade, 1);
+}
+
+.defaultRadioButtons__listBody {
+	margin: 0;
+    padding: 0;
+
+    display: flex;
+	flex-wrap: wrap;
+	
+	list-style: none;
+    text-decoration: none;
+}
+
+.defaultRadioButtons__listElement {
+	margin: 0;
+    padding: 0;
 }
 
 .defaultRadioButtons__button input {

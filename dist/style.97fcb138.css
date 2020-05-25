@@ -450,9 +450,7 @@
 
 .defaultRadioButtons {
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap; }
+  padding: 0; }
 
 .defaultRadioButtons__headline {
   margin: 0 0 13px 0;
@@ -466,6 +464,18 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #1f2041; }
+
+.defaultRadioButtons__listBody {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-decoration: none; }
+
+.defaultRadioButtons__listElement {
+  margin: 0;
+  padding: 0; }
 
 .defaultRadioButtons__button input {
   position: absolute;
