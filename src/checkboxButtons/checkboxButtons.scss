@@ -79,3 +79,7 @@
 .checkboxButtons input:checked + .checkboxButtons__text:after {
 	z-index: 1;
 }
+
+.checkboxButtons input:focus + .checkboxButtons__text:before {
+    box-shadow: 0px 0px 0px 1px $FocusColor;
+}

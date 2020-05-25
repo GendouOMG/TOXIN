@@ -1,0 +1,10 @@
+mixin toggleCheckboxList(headline, inputName, ...listElements)
+    div.toggleCheckboxList
+        p.toggleCheckboxList__headline= headline
+        ul.toggleCheckboxList__listBody
+            each listElement in listElements
+                li.toggleCheckboxList__listElement
+                    label.toggleCheckboxList__button
+                        input(name=inputName,type="checkbox",value=listElement)
+                        div.toggleCheckboxList__buttonTitle= listElement
+

@@ -365,6 +365,9 @@
 .checkboxButtons input:checked + .checkboxButtons__text:after {
   z-index: 1; }
 
+.checkboxButtons input:focus + .checkboxButtons__text:before {
+  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.75); }
+
 .hiddenCheckboxList {
   margin: 0;
   padding: 0;
@@ -485,9 +488,9 @@
 
 .defaultRadioButtons__title {
   position: relative;
+  cursor: pointer;
   margin: 0 20px 0 0;
   padding: 0 0 0 30px;
-  cursor: pointer;
   font-family: Montserrat;
   font-style: normal;
   text-align: left;
@@ -526,6 +529,133 @@
 
 .defaultRadioButtons__button input:checked + .defaultRadioButtons__title {
   color: #1f2041; }
+
+.defaultRadioButtons__button input:focus + .defaultRadioButtons__title:before {
+  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.75); }
+
+.toggleCheckboxList {
+  margin: 0;
+  padding: 0; }
+
+.toggleCheckboxList__headline {
+  margin: 0 0 13px 0;
+  padding: 0;
+  width: 100%;
+  font-family: Montserrat;
+  font-style: normal;
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1f2041; }
+
+.toggleCheckboxList__listBody {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+
+.toggleCheckboxList__button input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px; }
+
+.toggleCheckboxList__buttonTitle {
+  position: relative;
+  cursor: pointer;
+  margin: 0 20px 10px 0;
+  padding: 0 0 0 50px;
+  font-family: Montserrat;
+  font-style: normal;
+  text-align: left;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75); }
+
+.toggleCheckboxList__buttonTitle:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 38px;
+  height: 18px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  transition: .1s; }
+
+.toggleCheckboxList__buttonTitle:after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  background: rgba(31, 32, 65, 0.25);
+  transition: .1s; }
+
+.toggleCheckboxList__button input:checked + .toggleCheckboxList__buttonTitle:after {
+  left: 24px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+
+.toggleCheckboxList__button input:checked + .toggleCheckboxList__buttonTitle:before {
+  border: 1px solid #bc9cff; }
+
+.toggleCheckboxList__button input:focus + .toggleCheckboxList__buttonTitle:before {
+  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.75); }
+
+.likeButton input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px; }
+
+.likeButton__buttonView {
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  text-align: left;
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.25);
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 10px; }
+
+.likeButton__buttonView:before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  width: 5px;
+  height: 7px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%; }
+
+.likeButton__buttonView:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  width: 5px;
+  height: 7px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 50% 50% 0 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%; }
 
 
 /*# sourceMappingURL=/style.97fcb138.css.map */
