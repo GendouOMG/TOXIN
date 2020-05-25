@@ -1,0 +1,61 @@
+doctype html
+
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width,initial-scale=1")
+		link(href="style.scss", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap&subset=cyrillic", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic", rel="stylesheet")
+	
+	body
+		include inputTextField/inputTextField
+		+inputTextField("Text Field","Email")
+		
+		br
+
+		include defaultDpopdown/defaultDpopdown
+		+defaultDpopdown("Dropdown","Сколько гостей")
+		
+		br
+
+		include dateDropdown/dateDropdown
+		+dateDropdown("date Dropdown","ДД.ММ.ГГГГ")
+
+		br
+
+		include filterDateDropdown/filterDateDropdown
+		+filterDateDropdown("filter Date Dropdown","19 авг")
+
+		br
+
+		include subscriptionTextField/subscriptionTextField
+		+subscriptionTextField("subscription Text Field","Email")
+
+		br
+
+		include checkboxButtons/checkboxButtons
+		+checkboxButtons("Можно курить")
+
+		br
+
+		include hiddenCheckboxList/hiddenCheckboxList
+		//- +hiddenCheckboxButtons("список чекбоксов")
+		+hiddenCheckboxList("expandable checkbox list", "Завтрак", "Письменный стол")
+
+
+		br
+
+		include defaultCheckboxList/defaultCheckboxList
+		+defaultCheckboxList("checkbox buttons", "Можно курить", "Можно")
+
+		br
+
+		include defaultRadioButtons/defaultRadioButtons
+
+		script(src="/hiddenCheckboxList/hiddenCheckboxList.js")
+
+
+
+	

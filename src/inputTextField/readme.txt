@@ -1,0 +1,1 @@
+mixin: inputTextField("YourHeadline","YourTextInsideInput")

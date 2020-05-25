@@ -1,0 +1,19 @@
+//- div.defaultCheckboxList
+//- 	p.defaultCheckboxList__headline= "checkbox buttons"
+//- 	ul.defaultCheckboxList__listBody
+//- 		li.defaultCheckboxList__listElement
+//- 			+checkboxButtons("Можно курить")
+//- 		li.defaultCheckboxList__listElement
+//- 			+checkboxButtons("Можно")
+//- 		li.defaultCheckboxList__listElement
+//- 			+checkboxButtons("Можно")
+//- 		li.defaultCheckboxList__listElement
+//- 			+checkboxButtons("Можно")
+
+mixin defaultCheckboxList(headline, ...listElements)
+	div.defaultCheckboxList
+		p.defaultCheckboxList__headline= headline
+		ul.defaultCheckboxList__listBody
+			each listElement in listElements
+				li.defaultCheckboxList__listElement
+					+checkboxButtons(listElement)

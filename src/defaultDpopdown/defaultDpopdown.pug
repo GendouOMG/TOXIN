@@ -1,0 +1,16 @@
+//- form(action="#").inputTextField
+//- 	p
+//- 		p.inputTextField__headline Text field
+//- 		input(type="text",
+//- 		size="40",
+//- 		placeholder="Email",
+//- 		outline="none").inputTextField__content
+
+
+//	mixin: defaultDpopdown("YourHeadline","YourTextInsideInput")
+
+mixin defaultDpopdown(headline,placeholder)
+	p.defaultDpopdown
+		p.defaultDpopdown__headline= headline
+		p.defaultDpopdown__content= placeholder
+			span.defaultDpopdown__arrowDown

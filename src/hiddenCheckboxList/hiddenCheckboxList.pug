@@ -1,0 +1,31 @@
+//- mixin hiddenCheckboxList(headline)
+//- 	div.hiddenCheckboxList
+//- 		p.hiddenCheckboxList__headline= headline
+//- 			span.hiddenCheckboxList__arrow
+//- 		ul.hiddenCheckboxList__hiddenList
+//- 			li.hiddenCheckboxList__buttonElement
+//- 				+checkboxButtons("Завтрак")
+//- 			li.hiddenCheckboxList__buttonElement
+//- 				+checkboxButtons("Письменный стол")
+//- 			li.hiddenCheckboxList__buttonElement
+//- 				+checkboxButtons("Стул для")
+//- 			li.hiddenCheckboxList__buttonElement
+//- 				+checkboxButtons("Кроватка")
+//- 			li.hiddenCheckboxList__buttonElement
+//- 				+checkboxButtons("Телевизор")
+//- 			li.hiddenCheckboxList__buttonElement
+//- 				+checkboxButtons("Можно курить")
+
+//- script(src="/hiddenCheckboxList/hiddenCheckboxList.js")
+
+
+mixin hiddenCheckboxList(headline, ...buttonElements)
+	div.hiddenCheckboxList
+		p.hiddenCheckboxList__headline= headline
+			span.hiddenCheckboxList__arrow
+		ul.hiddenCheckboxList__hiddenList
+			each buttonElement in buttonElements
+				li.hiddenCheckboxList__buttonElement
+					+checkboxButtons(buttonElement)
+
+

@@ -1,0 +1,16 @@
+//- form(action="#").inputTextField
+//- 	p
+//- 		p.inputTextField__headline Text field
+//- 		input(type="text",
+//- 		size="40",
+//- 		placeholder="Email",
+//- 		outline="none").inputTextField__content
+
+
+//	mixin: defaultDpopdown("YourHeadline","YourTextInsideInput")
+
+mixin subscriptionTextField(headline,placeholder)
+	p.subscriptionTextField
+		p.subscriptionTextField__headline= headline
+		div.subscriptionTextField__content= placeholder
+			div.subscriptionTextField__arrowGradient
