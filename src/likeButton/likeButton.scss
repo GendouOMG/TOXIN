@@ -1,3 +1,10 @@
+.likeButton {
+    margin: 0;
+    padding: 0;
+    
+    position: relative;
+}
+
 .likeButton input {
 	position: absolute;
 	z-index: -1;
@@ -35,10 +42,11 @@
     position: absolute; 
     left: 9px; 
     top: 6px;
+
     width: 5px; 
     height: 7px;
-    // background: $PurpleGradient;
-    background: opacify($DarkShade, 0.25);
+
+    background: mix(opacify($DarkShade, 1),#FFFFFF,25%);
     border-radius: 50% 50% 0 0;
     transform: rotate(-45deg); 
     transform-origin: 0 100%;
@@ -48,11 +56,230 @@
     position: absolute; 
     left: 5px;
     top: 6px;
+
     width: 5px; 
     height: 7px;
-    // background: $PurpleGradient;
-    background: opacify($DarkShade, 0.25);
+
+    background: mix(opacify($DarkShade, 1),#FFFFFF,25%);
     border-radius: 50% 50% 0 0;
     transform: rotate(45deg); 
     transform-origin: 100% 100%;
+}
+
+.likeButton__number {
+    cursor: pointer;
+    position: absolute;
+    left: 12px; 
+    top: 3px;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 23px; 
+    height: auto;
+
+    font-family: Montserrat;
+	font-style: normal;
+	text-align: left;
+	font-size: 10px;
+	line-height: 12px;
+	font-weight: 400;
+	// text-transform: uppercase;
+	color: opacify($DarkShade, 0);
+}
+
+
+
+.likeButton__inactiveHover {
+    cursor: pointer;
+    position: absolute;
+    left: 0px; 
+    top: 0px;
+    
+    margin: 0;
+	padding: 0;
+    
+    width: 40px;
+    height: 20px;
+
+    font-family: Montserrat;
+	font-style: normal;
+	text-align: left;
+	font-size: 10px;
+	line-height: 12px;
+	font-weight: 400;
+	// text-transform: uppercase;
+	color: opacify($DarkShade, 0);
+}
+
+.likeButton__inactiveHover:before {
+    content: "";
+    position: absolute; 
+    left: 10px; 
+    top: 8px;
+
+    width: 3px; 
+    height: 5px;
+
+    // background: rgb(100, 45, 45);
+    background: #FFF;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%;
+}
+
+.likeButton__inactiveHover:after {
+    content: "";
+    position: absolute; 
+    left: 8px;
+    top: 8px;
+
+    width: 3px; 
+    height: 5px;
+
+    // background: rgb(100, 45, 45);
+    background: #FFF;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(45deg); 
+    transform-origin: 100% 100%;
+}
+
+.likeButton__numberHover {
+    cursor: pointer;
+    position: absolute;
+    left: 13px; 
+    top: 4px;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 23px; 
+    height: auto;
+
+    font-family: Montserrat;
+	font-style: normal;
+	text-align: left;
+	font-size: 10px;
+	line-height: 12px;
+	font-weight: 400;
+	// text-transform: uppercase;
+	color: opacify($DarkShade, 0.25);
+}
+
+
+
+.likeButton input:focus ~ .likeButton__buttonView {
+    box-shadow: 0px 0px 0px 1px $FocusColor;
+}
+
+.likeButton input:checked ~ .likeButton__buttonView {
+    position: relative;
+    cursor: pointer;
+    
+    margin: 0;
+	padding: 0;
+    
+    width: 40px;
+    height: 20px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    text-align: left;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+	// text-transform: uppercase;
+	color: opacify($Purple, 0);
+
+    background: $PurpleGradient;
+    border: 0px solid opacify($DarkShade, 0.25);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+
+.likeButton input:checked ~ .likeButton__buttonView:before {
+    background: opacify($Purple, 1);
+}
+
+.likeButton input:checked ~ .likeButton__buttonView:after {
+    background: opacify($Purple, 1);
+}
+
+
+
+
+
+.likeButton input:checked ~ .likeButton__inactiveHover {
+    cursor: pointer;
+    position: absolute;
+    left: 1px; 
+    top: 1px;
+    
+    margin: 0;
+	padding: 0;
+    
+    width: 38px;
+    height: 18px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    text-align: left;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+	// text-transform: uppercase;
+	color: opacify($Purple, 1);
+
+    background: #FFFFFF;
+    border: 0px solid opacify($DarkShade, 0.25);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.likeButton input:checked ~ .likeButton__inactiveHover:before {
+    // width: 0; 
+    // height: 0;
+    content: "";
+    position: absolute; 
+    left: 9px; 
+    top: 6px;
+    width: 5px; 
+    height: 7px;
+    background: opacify($Purple, 1);
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%;
+}
+
+.likeButton input:checked ~ .likeButton__inactiveHover:after {
+    // background: rgba(100, 45, 45,0);
+    content: "";
+    position: absolute; 
+    left: 5px;
+    top: 6px;
+    width: 5px; 
+    height: 7px;
+
+    background: opacify($Purple, 1);
+    border-radius: 50% 50% 0 0;
+    transform: rotate(45deg); 
+    transform-origin: 100% 100%;
+}
+
+
+.likeButton input:checked ~ .likeButton__inactiveHover .likeButton__numberHover {
+    position: absolute;
+    left: 12px; 
+    top: 3px;
+
+	color: opacify($Purple, 1);
 }

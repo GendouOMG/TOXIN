@@ -1,3 +1,6 @@
-label.likeButton
-    input(type="checkbox")
-    div.likeButton__buttonView
+mixin likeButton(inputName, likeValue)
+    label.likeButton
+        input(name=inputName,type="checkbox")
+        div.likeButton__buttonView
+        div.likeButton__inactiveHover
+            p.likeButton__numberHover= likeValue
