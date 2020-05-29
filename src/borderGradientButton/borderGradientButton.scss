@@ -1,0 +1,65 @@
+.borderGradientButton {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+
+    background: $PurpleGradient;
+
+    border-radius: 22px;
+    border: 0px solid opacify($Purple, 1);
+    
+    outline: none;
+}
+
+.borderGradientButton__textContain {
+    margin: 12px 17px;
+    padding: 0;
+
+    white-space: nowrap;
+
+    font-family: Montserrat;
+	font-style: normal;
+	text-align: left;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: opacify($Purple, 1);
+}
+
+.borderGradientButton__hover {
+    margin: 2px;
+    padding: 0;
+
+    display: flex;
+
+    background: #FFFFFF;
+
+    border-radius: 22px;
+    border: 0px solid opacify($Purple, 1);
+}
+
+
+
+
+.borderGradientButton:focus {
+    box-shadow: 0px 0px 0px 1px $FocusColor;
+}
+
+.borderGradientButton:hover .borderGradientButton__hover{
+    box-shadow: 0px 0px 0px 2px opacify(rgba(#FFF,0), 0.2);
+}
+
+.borderGradientButton:active .borderGradientButton__hover {
+    box-shadow: 0px 0px 0px 2px opacify(rgba(#FFF,0), 0.5);
+}
+
+.borderGradientButton > .borderGradientButton__buttonFix,
+.borderGradientButton:active .borderGradientButton__buttonFix,
+.borderGradientButton:focus .borderGradientButton__buttonFix {
+    margin: 0;
+    padding: 0;
+    position:relative;
+    top: 0;
+    left: 0;
+}

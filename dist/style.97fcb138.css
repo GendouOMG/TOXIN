@@ -366,7 +366,7 @@
   z-index: 1; }
 
 .checkboxButtons input:focus + .checkboxButtons__text:before {
-  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.75); }
+  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.9); }
 
 .hiddenCheckboxList {
   margin: 0;
@@ -531,7 +531,7 @@
   color: #1f2041; }
 
 .defaultRadioButtons__button input:focus + .defaultRadioButtons__title:before {
-  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.75); }
+  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.9); }
 
 .toggleCheckboxList {
   margin: 0;
@@ -606,7 +606,7 @@
   border: 1px solid #bc9cff; }
 
 .toggleCheckboxList__button input:focus + .toggleCheckboxList__buttonTitle:before {
-  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.75); }
+  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.9); }
 
 .likeButton {
   margin: 0;
@@ -744,7 +744,7 @@
   color: rgba(31, 32, 65, 0.25); }
 
 .likeButton input:focus ~ .likeButton__buttonView {
-  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.75); }
+  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.9); }
 
 .likeButton input:checked ~ .likeButton__buttonView {
   position: relative;
@@ -821,6 +821,222 @@
   left: 12px;
   top: 3px;
   color: #bc9cff; }
+
+.fullGradientButton {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  border: 0px solid #bc9cff;
+  outline: none; }
+
+.fullGradientButton__textContain {
+  margin: 14px 19px;
+  padding: 0;
+  white-space: nowrap;
+  font-family: Montserrat;
+  font-style: normal;
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF; }
+
+.fullGradientButton:focus {
+  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.9); }
+
+.fullGradientButton:hover {
+  opacity: 0.9; }
+
+.fullGradientButton:active {
+  opacity: 0.5; }
+
+.fullGradientButton > .fullGradientButton__buttonFix,
+.fullGradientButton:active > .fullGradientButton__buttonFix,
+.fullGradientButton:focus > .fullGradientButton__buttonFix {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 0; }
+
+.borderGradientButton {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  border: 0px solid #bc9cff;
+  outline: none; }
+
+.borderGradientButton__textContain {
+  margin: 12px 17px;
+  padding: 0;
+  white-space: nowrap;
+  font-family: Montserrat;
+  font-style: normal;
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #bc9cff; }
+
+.borderGradientButton__hover {
+  margin: 2px;
+  padding: 0;
+  display: flex;
+  background: #FFFFFF;
+  border-radius: 22px;
+  border: 0px solid #bc9cff; }
+
+.borderGradientButton:focus {
+  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.9); }
+
+.borderGradientButton:hover .borderGradientButton__hover {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.2); }
+
+.borderGradientButton:active .borderGradientButton__hover {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5); }
+
+.borderGradientButton > .borderGradientButton__buttonFix,
+.borderGradientButton:active .borderGradientButton__buttonFix,
+.borderGradientButton:focus .borderGradientButton__buttonFix {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 0; }
+
+.simpleTextButton {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  outline: none; }
+
+.simpleTextButton__textContain {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  font-family: Montserrat;
+  font-style: normal;
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #bc9cff; }
+
+.simpleTextButton:focus {
+  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.9); }
+
+.simpleTextButton:hover {
+  opacity: 0.9; }
+
+.simpleTextButton:active .simpleTextButton__textContain {
+  color: rgba(31, 32, 65, 0.5); }
+
+.simpleTextButton > .simpleTextButton__buttonFix,
+.simpleTextButton:active .simpleTextButton__buttonFix,
+.simpleTextButton:focus .simpleTextButton__buttonFix {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 0; }
+
+.fullGradientButtonWithArrow {
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex: auto;
+  justify-content: space-around;
+  min-width: min-content;
+  width: 100%;
+  max-width: 320px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  border: 0px solid #bc9cff;
+  outline: none; }
+
+.fullGradientButtonWithArrow__arrow {
+  position: absolute; }
+
+.fullGradientButtonWithArrow__arrow {
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 16px;
+  top: 21px;
+  width: 14px;
+  height: 2px;
+  background-color: #FFFFFF; }
+
+.fullGradientButtonWithArrow__arrow::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  margin: 0;
+  padding: 0;
+  width: 11px;
+  height: 2px;
+  background-color: #FFFFFF;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); }
+
+.fullGradientButtonWithArrow__arrow::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: -3px;
+  margin: 0;
+  padding: 0;
+  width: 11px;
+  height: 2px;
+  background-color: #FFFFFF;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); }
+
+.fullGradientButtonWithArrow__textContain {
+  margin: 14px 30px 15px 30px;
+  padding: 0;
+  max-width: 200px;
+  white-space: nowrap;
+  font-family: Montserrat;
+  font-style: normal;
+  text-align: center;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF; }
+
+.fullGradientButtonWithArrow:focus {
+  box-shadow: 0px 0px 0px 1px rgba(113, 220, 253, 0.9); }
+
+.fullGradientButtonWithArrow:hover {
+  opacity: 0.9; }
+
+.fullGradientButtonWithArrow:active {
+  opacity: 0.5; }
+
+.fullGradientButtonWithArrow > .fullGradientButtonWithArrow__buttonFix,
+.fullGradientButtonWithArrow:active .fullGradientButtonWithArrow__buttonFix,
+.fullGradientButtonWithArrow:focus .fullGradientButtonWithArrow__buttonFix {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 0; }
 
 
 /*# sourceMappingURL=/style.97fcb138.css.map */

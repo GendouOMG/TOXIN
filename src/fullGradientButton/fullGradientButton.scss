@@ -1,0 +1,51 @@
+.fullGradientButton {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+
+    background: $PurpleGradient;
+
+    border-radius: 22px;
+    border: 0px solid opacify($Purple, 1);
+    
+    outline: none;
+}
+
+.fullGradientButton__textContain {
+    margin: 14px 19px;
+    padding: 0;
+
+    white-space: nowrap;
+
+    font-family: Montserrat;
+	font-style: normal;
+	text-align: left;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+
+.fullGradientButton:focus {
+    box-shadow: 0px 0px 0px 1px $FocusColor;
+}
+
+.fullGradientButton:hover {
+    opacity: 0.9;
+}
+
+.fullGradientButton:active {
+    opacity: 0.5;
+}
+
+.fullGradientButton > .fullGradientButton__buttonFix,
+.fullGradientButton:active > .fullGradientButton__buttonFix,
+.fullGradientButton:focus > .fullGradientButton__buttonFix {
+    margin: 0;
+    padding: 0;
+    position:relative;
+    top: 0;
+    left: 0;
+}
