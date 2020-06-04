@@ -1,3 +1,10 @@
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px; }
+
 .inputTextField {
   margin: 0;
   padding: 0; }
@@ -1101,7 +1108,7 @@
   background-image: url(/star_on.6aad830d.svg); }
 
 .rateButtonStars__star:hover ~ .rateButtonStars__star {
-  background-image: url(/star_off.0bcedab8.svg); }
+  opacity: 0; }
 
 .rateButtonStars__star:nth-of-type(1) {
   z-index: 5;

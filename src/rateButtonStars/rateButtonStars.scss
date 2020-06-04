@@ -169,13 +169,15 @@
 
 }
 
+
 .rateButtonStars__input:checked + .rateButtonStars__star,
 .rateButtonStars__star:hover {
     background-image: url(rateButtonStars/star_on.svg);
 }
 
 .rateButtonStars__star:hover ~ .rateButtonStars__star {
-    background-image: url(rateButtonStars/star_off.svg);
+    // background-image: url(rateButtonStars/star_off.svg);
+    opacity: 0;
 }
 
 
