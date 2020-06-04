@@ -343,7 +343,8 @@
   background: #FFFFFF;
   border-width: 2px;
   border-style: solid;
-  border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 1;
+  -o-border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 1;
+     border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 1;
   box-sizing: border-box;
   border-top: none;
   border-left: none;
@@ -957,6 +958,8 @@
   display: flex;
   flex: auto;
   justify-content: space-around;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
   min-width: min-content;
   width: 100%;
   max-width: 320px;
@@ -1037,6 +1040,88 @@
   position: relative;
   top: 0;
   left: 0; }
+
+.rateButtonStars {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
+.rateButtonStars__headline {
+  margin: 0 0 1.3em 0;
+  padding: 0; }
+
+.rateButtonStars__group {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  height: 24px;
+  background-image: url(/star_off.0bcedab8.svg);
+  background-size: 24px 24px;
+  background-repeat: repeat-x; }
+
+.rateButtonStars__input {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0); }
+
+.rateButtonStars__input:focus {
+  outline: none; }
+
+.rateButtonStars__input:focus ~ .rateButtonStars__focus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  outline: solid 1px rgba(113, 220, 253, 0.9);
+  outline-offset: 2px; }
+
+.rateButtonStars__star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 24px;
+  background-size: 24px 24px;
+  background-repeat: repeat-x; }
+
+.rateButtonStars__input:checked + .rateButtonStars__star,
+.rateButtonStars__star:hover {
+  background-image: url(/star_on.6aad830d.svg); }
+
+.rateButtonStars__star:hover ~ .rateButtonStars__star {
+  background-image: url(/star_off.0bcedab8.svg); }
+
+.rateButtonStars__star:nth-of-type(1) {
+  z-index: 5;
+  width: 24px; }
+
+.rateButtonStars__star:nth-of-type(2) {
+  z-index: 4;
+  width: 48px; }
+
+.rateButtonStars__star:nth-of-type(3) {
+  z-index: 3;
+  width: 72px; }
+
+.rateButtonStars__star:nth-of-type(4) {
+  z-index: 2;
+  width: 96px; }
+
+.rateButtonStars__star:nth-of-type(5) {
+  z-index: 1;
+  width: 120px; }
 
 
 /*# sourceMappingURL=/style.97fcb138.css.map */

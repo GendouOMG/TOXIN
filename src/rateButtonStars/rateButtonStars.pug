@@ -1,0 +1,27 @@
+//- rateButtonStars
+mixin rateButtonStars(name, checkedNumber)
+
+    fieldset.rateButtonStars
+        legend.rateButtonStars__headline="Оценка"
+        div.rateButtonStars__group
+ 
+            input.rateButtonStars__input(type="radio", name=name, value="1", id=name+"-1", checked=(checkedNumber==1))
+            label.rateButtonStars__star(for=name+"-1", aria-label="Ужасно")
+
+
+            input.rateButtonStars__input(type="radio", name=name, value="2", id=name+"-2", checked=(checkedNumber==2))
+            label.rateButtonStars__star(for=name+"-2", aria-label="Плохо")
+
+
+            input.rateButtonStars__input(type="radio", name=name, value="3", id=name+"-3", checked=(checkedNumber==3))
+            label.rateButtonStars__star(for=name+"-3", aria-label="Нормально")
+
+
+            input.rateButtonStars__input(type="radio", name=name, value="4", id=name+"-4", checked=(checkedNumber==4))
+            label.rateButtonStars__star(for=name+"-4", aria-label="Хорошо")
+
+
+            input.rateButtonStars__input(type="radio", name=name, value="5", id=name+"-5", checked=(checkedNumber==5))
+            label.rateButtonStars__star(for=name+"-5", aria-label="Отлично")
+
+            div.rateButtonStars__focus

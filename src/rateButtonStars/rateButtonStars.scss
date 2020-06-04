@@ -1,0 +1,211 @@
+// .rateButtonStars {
+//     margin: 0;
+//     padding: 0;
+//     border: none;
+// }
+
+// .rateButtonStars__headline {
+//     margin: 0 0 1.3em 0;
+//     padding: 0;
+
+// }
+
+// .rateButtonStars__group {
+//     position: relative;
+
+//     width: 120px;
+//     height: 24px;
+
+//     background-image: url(rateButtonStars/star_off.svg);
+//     background-size: 24px auto;
+//     background-repeat: repeat-x;
+// }
+
+// .rateButtonStars__star {
+//     margin: 0;
+//     padding: 0;
+
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+
+//     height: 24px;
+//     font-size: inherit;
+//     background-size: 24px auto;
+//     background-repeat: repeat-x;
+
+//     appearance: none;
+// }
+
+// .rateButtonStars__star:focus {
+//     outline: none;
+// }
+
+// .rateButtonStars__star:focus ~ .rateButtonStars__focus{
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     z-index: -1;
+//     outline: solid 1px $FocusColor;
+//     outline-offset: 2px;
+// }
+
+// .rateButtonStars__star:checked,
+// .rateButtonStars__star:hover {
+//     background-image: url(rateButtonStars/star_on.svg);
+// }
+
+// .rateButtonStars__star:hover ~ .rateButtonStars__star {
+//     background-image: url(rateButtonStars/star_off.svg);
+// }
+
+
+// // Options
+// .rateButtonStars__star:nth-of-type(1) {
+//     z-index: 5;
+
+//     width: 24px;
+// }
+
+// .rateButtonStars__star:nth-of-type(2) {
+//     z-index: 4;
+
+//     width: 48px;
+// }
+
+// .rateButtonStars__star:nth-of-type(3) {
+//     z-index: 3;
+
+//     width: 72px;
+// }
+
+// .rateButtonStars__star:nth-of-type(4) {
+//     z-index: 2;
+
+//     width: 96px;
+// }
+
+// .rateButtonStars__star:nth-of-type(5) {
+//     z-index: 1;
+
+//     width: 120px;
+// }
+
+.rateButtonStars {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.rateButtonStars__headline {
+    margin: 0 0 1.3em 0;
+    padding: 0;
+
+}
+
+.rateButtonStars__group {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    width: 120px;
+    height: 24px;
+
+    background-image: url(rateButtonStars/star_off.svg);
+    background-size: 24px 24px;
+    // background-size: 24px auto;
+    background-repeat: repeat-x;
+
+}
+
+.rateButtonStars__input {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    margin: 0;
+    padding: 0;
+
+	opacity: 0;
+    // z-index: -1;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+}
+
+.rateButtonStars__input:focus {
+    outline: none;
+}
+
+.rateButtonStars__input:focus ~ .rateButtonStars__focus{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    outline: solid 1px $FocusColor;
+    outline-offset: 2px;
+}
+
+.rateButtonStars__star {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    padding: 0;
+
+    width: auto;
+    height: 24px;
+
+    background-size: 24px 24px;
+    // background-size: 24px auto;
+    background-repeat: repeat-x;
+
+}
+
+.rateButtonStars__input:checked + .rateButtonStars__star,
+.rateButtonStars__star:hover {
+    background-image: url(rateButtonStars/star_on.svg);
+}
+
+.rateButtonStars__star:hover ~ .rateButtonStars__star {
+    background-image: url(rateButtonStars/star_off.svg);
+}
+
+
+// Options
+.rateButtonStars__star:nth-of-type(1) {
+    z-index: 5;
+
+    width: 24px;
+}
+
+.rateButtonStars__star:nth-of-type(2) {
+    z-index: 4;
+
+    width: 48px;
+}
+
+.rateButtonStars__star:nth-of-type(3) {
+    z-index: 3;
+
+    width: 72px;
+}
+
+.rateButtonStars__star:nth-of-type(4) {
+    z-index: 2;
+
+    width: 96px;
+}
+
+.rateButtonStars__star:nth-of-type(5) {
+    z-index: 1;
+
+    width: 120px;
+}

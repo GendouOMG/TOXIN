@@ -13,5 +13,9 @@
   "description": "",
   "devDependencies": {
     "pug": "^2.0.4"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "postcss-modules": "^2.0.0"
   }
 }
