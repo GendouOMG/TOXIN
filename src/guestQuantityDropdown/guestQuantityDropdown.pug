@@ -1,0 +1,26 @@
+
+div.itemQuantityDropdown
+	h2.visually-hidden= "Список опций"
+	button.itemQuantityDropdown__toggle 
+		p.itemQuantityDropdown__selection= "Сколько гостей"
+		span.itemQuantityDropdown__arrowDown
+	ul.itemQuantityDropdown__dropdownMenu
+		li.itemQuantityDropdown__menuOption
+			p.itemQuantityDropdown__item= "Взрослые"
+			button.itemQuantityDropdown__controlButton.itemQuantityDropdown__controlButton--minus(disabled)
+			span.itemQuantityDropdown__currentQuantity= "0"
+			button.itemQuantityDropdown__controlButton.itemQuantityDropdown__controlButton--plus
+		li.itemQuantityDropdown__menuOption
+			p.itemQuantityDropdown__item= "Дети"
+			button.itemQuantityDropdown__controlButton.itemQuantityDropdown__controlButton--minus(disabled)
+			span.itemQuantityDropdown__currentQuantity= "0"
+			button.itemQuantityDropdown__controlButton.itemQuantityDropdown__controlButton--plus
+		li.itemQuantityDropdown__menuOption
+			p.itemQuantityDropdown__item= "Младенцы"
+			button.itemQuantityDropdown__controlButton.itemQuantityDropdown__controlButton--minus(disabled)
+			span.itemQuantityDropdown__currentQuantity= "0"
+			button.itemQuantityDropdown__controlButton.itemQuantityDropdown__controlButton--plus
+
+		li.itemQuantityDropdown__controlButtons
+			button.itemQuantityDropdown__applyButton= "применить"
+			button.itemQuantityDropdown__clearButton= "очистить"

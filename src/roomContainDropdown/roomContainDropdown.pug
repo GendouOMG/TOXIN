@@ -1,0 +1,22 @@
+
+div.itemQuantityDropdown(data-mode="eachItems")
+	h2.visually-hidden= "Список опций"
+	button.itemQuantityDropdown__toggle 
+		p.itemQuantityDropdown__selection= "Выберите удобства"
+		span.itemQuantityDropdown__arrowDown
+	ul.itemQuantityDropdown__dropdownMenu
+		li.itemQuantityDropdown__menuOption
+			p.itemQuantityDropdown__item= "спальни"
+			button.itemQuantityDropdown__controlButton.itemQuantityDropdown__controlButton--minus(disabled)
+			span.itemQuantityDropdown__currentQuantity= "2"
+			button.itemQuantityDropdown__controlButton.itemQuantityDropdown__controlButton--plus
+		li.itemQuantityDropdown__menuOption
+			p.itemQuantityDropdown__item= "кровати"
+			button.itemQuantityDropdown__controlButton.itemQuantityDropdown__controlButton--minus(disabled)
+			span.itemQuantityDropdown__currentQuantity= "2"
+			button.itemQuantityDropdown__controlButton.itemQuantityDropdown__controlButton--plus
+		li.itemQuantityDropdown__menuOption
+			p.itemQuantityDropdown__item= "ванные комнаты"
+			button.itemQuantityDropdown__controlButton.itemQuantityDropdown__controlButton--minus(disabled)
+			span.itemQuantityDropdown__currentQuantity= "0"
+			button.itemQuantityDropdown__controlButton.itemQuantityDropdown__controlButton--plus

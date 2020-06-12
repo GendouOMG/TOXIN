@@ -1,0 +1,292 @@
+.itemQuantityDropdown {
+    position: relative;
+    min-width: 150px;
+    width: 100%;
+    // width: 320px;
+
+    margin: 0px;
+    padding: 0px;
+
+    border: 1px solid opacify($DarkShade, 0.25);;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.itemQuantityDropdown:hover,
+.itemQuantityDropdown:active,
+.itemQuantityDropdown:focus,
+.itemQuantityDropdown:focus-within {
+    border: 1px solid opacify($DarkShade, 0.5);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+// .itemQuantityDropdown:focus {
+//     box-shadow: 0px 0px 0px 1px $FocusColor;
+// }
+
+.itemQuantityDropdown__toggle {
+    cursor: pointer;
+    position: relative;
+    min-width: 50px;
+    width: 100%;
+
+    margin: 0px;
+    padding: 0px;
+
+    outline: none;
+    background-color: #FFFFFF;
+
+
+    border: 0px solid opacify($DarkShade, 0.25);;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.itemQuantityDropdown__toggle:hover,
+.itemQuantityDropdown__toggle:active,
+.itemQuantityDropdown__toggle:focus {
+    
+    border: 0px solid opacify($DarkShade, 0.5);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+/* arrowDown */
+
+.itemQuantityDropdown__arrowDown {
+    margin: 0;
+	padding: 0;
+
+	position: absolute;
+	top: 14px;
+	right: 17px;
+
+	width: 7px;
+	height: 7px;
+
+	border: solid opacify($DarkShade, 0.75);
+	border-width: 0 2px 2px 0;
+	display: inline-block;
+	// padding: 4px;
+
+	transform: rotate(45deg);
+}
+
+/* selection */
+
+.itemQuantityDropdown__selection {
+    margin: 14px 30px 14px 14px;
+    // padding: 15px 30px 15px 15px;
+    padding: 0;
+ 
+
+    font-family: Montserrat;
+	font-style: normal;
+	text-align: left;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 400;
+	// text-transform: uppercase;
+    color: opacify($DarkShade, 0.75);
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* dropdownMenu */
+
+.itemQuantityDropdown__dropdownMenu {
+    display: none;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    text-decoration: none;
+
+    font-family: Montserrat;
+	font-style: normal;
+	text-align: left;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+    color: opacify($DarkShade, 1);
+    
+    border-top: 1px solid opacify($DarkShade, 0.5);
+}
+
+/* menuOption */
+
+.itemQuantityDropdown__menuOption {
+    margin: 12px 0 0 14px;
+    padding: 0;
+
+    position: relative;
+}
+
+
+/* item */
+
+.itemQuantityDropdown__item {
+    margin: 0 100px 22px 0;
+    padding: 0;
+
+    list-style: none;
+    text-decoration: none;
+
+    font-family: Montserrat;
+	font-style: normal;
+	text-align: left;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+    color: opacify($DarkShade, 1);
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* currentQuantity */
+
+.itemQuantityDropdown__currentQuantity {
+    position: absolute;
+    display: block;
+
+    right: 36px;
+    top: 0;
+
+    width: 32px;
+
+    font-family: Montserrat;
+	font-style: normal;
+	text-align: center;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+    color: opacify($DarkShade, 1);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+/* controlButton */
+
+.itemQuantityDropdown__controlButton {
+    cursor: pointer;
+
+    display: block;
+    width: 30px;
+    height: 30px;
+    outline: none;
+
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid opacify($DarkShade, 0.25);
+}
+
+.itemQuantityDropdown__controlButton:focus {
+    box-shadow: 0px 0px 0px 1px $FocusColor;
+}
+
+.itemQuantityDropdown__controlButton:disabled {
+    opacity: 0.38;
+}
+
+/* controlButtons */
+
+.itemQuantityDropdown__controlButtons {
+    margin: 29px 7px 13px 13px;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row-reverse;
+    // align-items: right;
+    justify-content: space-between;
+}
+
+.itemQuantityDropdown__applyButton,
+.itemQuantityDropdown__clearButton {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+
+    font-family: Montserrat;
+	font-style: normal;
+	text-align: center;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+    color: opacify($Purple, 1);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    background-color: rgba(#FFFFFF,0);
+    border: none;
+    outline: none;
+}
+.itemQuantityDropdown__applyButton:focus,
+.itemQuantityDropdown__clearButton:focus {
+    box-shadow: 0px 0px 0px 1px $FocusColor;
+}
+
+.itemQuantityDropdown__clearButton {
+    color: opacify($DarkShade, 0.5);
+    display: none;
+}
+
+
+/* OPTIONS */
+
+.itemQuantityDropdown__controlButton--plus {
+    position: absolute;
+    top: -6px;
+    right: 6px;
+}
+
+.itemQuantityDropdown__controlButton--plus::before,
+.itemQuantityDropdown__controlButton--plus::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 13px;
+
+    width: 8px;
+    height: 1px;
+
+    background-color: opacify($DarkShade, 0.5);;
+}
+
+.itemQuantityDropdown__controlButton--plus::after {
+    transform: rotate(90deg);
+}
+
+
+.itemQuantityDropdown__controlButton--minus {
+    position: absolute;
+    top: -6px;
+    right: 68px;
+    border: 1px solid opacify($DarkShade, 0.25);
+}
+
+.itemQuantityDropdown__controlButton--minus::after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 14px;
+
+    width: 5px;
+    height: 1px;
+
+    background-color: opacify($DarkShade, 0.5);;
+}
+

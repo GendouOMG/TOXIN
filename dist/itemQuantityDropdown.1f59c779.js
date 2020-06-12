@@ -117,79 +117,151 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"itemQuantityDropdown/itemQuantityDropdown.js":[function(require,module,exports) {
+function numNameChange(quantity, nameList) {
+  var quantityMod = 0;
+  quantityMod = quantity % 10;
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
+  if (!quantity) {
+    return '';
   }
 
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
+  if (quantity > 10 && quantity < 21) {
+    return nameList[2];
+  } else {
+    // if (varQuantity1 > 1 && varQuantity1 < 5) { nameQ=' гостя'; }
+    if (quantityMod == 1) {
+      return nameList[0];
+    } else {
+      if (quantityMod > 1 && quantityMod < 5) {
+        return nameList[1];
+      } else {
+        return nameList[2];
       }
     }
-
-    cssTimeout = null;
-  }, 50);
+  }
 }
 
-module.exports = reloadCSS;
-},{"./bundle-url":"C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
+function changeHeadline() {
+  var currentMode = $(this).closest('.itemQuantityDropdown').data('mode'); //current "script" mode
 
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./rateButtonStars\\star_off.svg":[["star_off.0bcedab8.svg","rateButtonStars/star_off.svg"],"rateButtonStars/star_off.svg"],"./rateButtonStars\\star_on.svg":[["star_on.6aad830d.svg","rateButtonStars/star_on.svg"],"rateButtonStars/star_on.svg"],"_css_loader":"C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  var itemQuantity = 0; //summ all lists items quantity
+
+  var thisItemQuantity = 0; //current item quantity
+  // let itemQuantityMod = 0;
+
+  var itemName = ''; //special variation of name for current item quantity
+
+  var retuenedName = '';
+  var numNamesGuest = [' гость', ' гостя', ' гостей'];
+  var numBedroom = [' спальня', ' спальни', ' спален'];
+  var numBed = [' кровать', ' кровати', ' кроватей'];
+  var numBathroom = [' ванная комната', ' ванные комнаты', ' ванных комнат'];
+  $(this).closest('.itemQuantityDropdown').find('.itemQuantityDropdown__currentQuantity').each(function () {
+    itemQuantity = itemQuantity + +$(this).html();
+  });
+
+  if (currentMode == 'eachItems') {
+    if (itemQuantity) {
+      retuenedName = '';
+      $(this).closest('.itemQuantityDropdown').find('.itemQuantityDropdown__menuOption').each(function () {
+        thisItemQuantity = +$(this).children('.itemQuantityDropdown__currentQuantity').html(); // itemQuantity
+        // alert(thisItemQuantity);
+
+        itemName = $(this).children('.itemQuantityDropdown__item').html(); // alert(itemName);
+
+        if (itemName.toLowerCase().startsWith("спал")) {
+          // alert(itemName);    
+          itemName = numNameChange(thisItemQuantity, numBedroom);
+        }
+
+        if (itemName.toLowerCase().startsWith("кров")) {
+          itemName = numNameChange(thisItemQuantity, numBed);
+        }
+
+        if (itemName.toLowerCase().startsWith("ванн")) {
+          itemName = numNameChange(thisItemQuantity, numBathroom);
+        }
+
+        if (thisItemQuantity) {
+          retuenedName = retuenedName + thisItemQuantity + itemName + ', ';
+        }
+      });
+      retuenedName = retuenedName.slice(0, -2);
+      $(this).closest('.itemQuantityDropdown').find('.itemQuantityDropdown__selection').html(retuenedName);
+    } else {
+      $(this).closest('.itemQuantityDropdown').find('.itemQuantityDropdown__selection').html('Выберите удобства');
+    }
+  } else {
+    retuenedName = numNameChange(itemQuantity, numNamesGuest);
+    $(this).closest('.itemQuantityDropdown').find('.itemQuantityDropdown__selection').html(itemQuantity + retuenedName);
+
+    if (itemQuantity == 0) {
+      $(this).closest('.itemQuantityDropdown').find('.itemQuantityDropdown__selection').html('Сколько гостей');
+      $(this).closest('.itemQuantityDropdown__dropdownMenu').find('.itemQuantityDropdown__controlButton--minus').prop('disabled', true);
+      $(this).closest('.itemQuantityDropdown__dropdownMenu').find('.itemQuantityDropdown__clearButton').css("display", "none");
+    } else {
+      $(this).closest('.itemQuantityDropdown__dropdownMenu').find('.itemQuantityDropdown__clearButton').css("display", "block");
+    }
+  }
+}
+
+$(document).ready(function () {
+  var listToggle = '.itemQuantityDropdown__toggle';
+  var hiddenList = '.itemQuantityDropdown__dropdownMenu';
+  var plusButton = '.itemQuantityDropdown__controlButton--plus';
+  var minusButton = '.itemQuantityDropdown__controlButton--minus';
+  var currentQuantity = '.itemQuantityDropdown__currentQuantity';
+  $(this).find('.itemQuantityDropdown__dropdownMenu').each(function () {
+    changeHeadline.call(this);
+    $(this).find(currentQuantity).each(function () {
+      if (!+$(this).html()) {
+        $(this).siblings(minusButton).prop('disabled', true);
+      } else {
+        $(this).siblings(minusButton).prop('disabled', false);
+      }
+    });
+  });
+  $(listToggle).click(function () {
+    // $(this).siblings(hiddenList).toggleClass('visually-hidden');
+    $(this).siblings(hiddenList).slideToggle('fast');
+  });
+  $(plusButton).click(function () {
+    var varQuantity = 0;
+    varQuantity = +$(this).siblings(currentQuantity).html();
+    varQuantity++;
+    $(this).siblings(currentQuantity).html(varQuantity);
+
+    if (varQuantity) {
+      $(this).siblings(minusButton).prop('disabled', false);
+    }
+
+    changeHeadline.call(this);
+  });
+  $(minusButton).click(function () {
+    var varQuantity = 0;
+    varQuantity = +$(this).siblings(currentQuantity).html();
+
+    if (varQuantity) {
+      varQuantity--;
+      $(this).siblings(currentQuantity).html(varQuantity);
+    }
+
+    if (!varQuantity) {
+      $(this).prop('disabled', true);
+    }
+
+    changeHeadline.call(this); // alert(varQuantity);
+  });
+  $('.itemQuantityDropdown__applyButton').click(function () {
+    $(this).closest(hiddenList).slideToggle('fast');
+  });
+  $('.itemQuantityDropdown__clearButton').click(function () {
+    $(this).closest(hiddenList).find(currentQuantity).html(0);
+    changeHeadline.call(this);
+  });
+});
+},{}],"C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +465,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/style.97fcb138.js.map
+},{}]},{},["C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","itemQuantityDropdown/itemQuantityDropdown.js"], null)
+//# sourceMappingURL=/itemQuantityDropdown.1f59c779.js.map

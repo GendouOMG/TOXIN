@@ -2,7 +2,7 @@
 mixin rateButtonStars(name, checkedNumber)
 
     fieldset.rateButtonStars
-        legend.rateButtonStars__headline="Оценка"
+        legend.rateButtonStars__headline.visually-hidden="Оценка"
         div.rateButtonStars__group
  
             input.rateButtonStars__input(type="radio", name=name, value="1", id=name+"-1", checked=(checkedNumber==1))
