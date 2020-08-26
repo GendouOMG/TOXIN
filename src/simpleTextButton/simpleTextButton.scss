@@ -32,10 +32,7 @@
     box-shadow: 0px 0px 0px 1px $FocusColor;
 }
 
-.simpleTextButton:hover {
-    opacity: 0.9;
-}
-
+.simpleTextButton__textContain--dark,
 .simpleTextButton:active .simpleTextButton__textContain{
     color: opacify($DarkShade, 0.5);
 }

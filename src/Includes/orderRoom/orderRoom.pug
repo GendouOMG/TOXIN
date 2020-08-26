@@ -1,0 +1,35 @@
+include ../../dateDropdown/dateDropdown
+include ../../guestQuantityDropdown/guestQuantityDropdown
+include ../../fullGradientButtonWithArrow/fullGradientButtonWithArrow
+
+form.orderRoom
+    div.orderRoom__roomInfo
+        p.orderRoom__name='№\u00A0'
+            span.orderRoom__roomNumber.headline_N1="888"
+            span.orderRoom__roomType.headline_N3="\u00A0Люкс"
+        p.orderRoom__costInfo 
+            span.orderRoom__roomPrice="9 990₽"
+            ="\u00A0в сутки"
+    div.orderRoom__dateDropdown
+        +dateDropdown("Прибытие","ДД.ММ.ГГГГ","Выезд","ДД.ММ.ГГГГ")
+    p.orderRoom__guestQuantityDropdownHeadline.headline_N3= "Гости"
+    div.orderRoom__guestQuantityDropdown
+        +guestQuantityDropdown(3,0,0)
+    ul.orderRoom__fee
+        li.orderRoom__feeItem.text_Casual
+            p.orderRoom__feeTitle="9\u00A0990₽ х 4 суток"
+            span.orderRoom__infoIcon
+            p.orderRoom__feeCost="39\u00A0960₽"
+        li.orderRoom__feeItem.text_Casual
+            p.orderRoom__feeTitle="Сбор за услуги: скидка 2\u00A0179₽"
+            span.orderRoom__infoIcon="\u24D8"
+            p.orderRoom__feeCost="0₽"
+        li.orderRoom__feeItem.orderRoom__feeItem--last.text_Casual
+            p.orderRoom__feeTitle="Сбор за дополнительные услуги"
+            span.orderRoom__infoIcon="\u24D8"
+            p.orderRoom__feeCost="300₽"
+    div.orderRoom__total
+        p.orderRoom__totalTitle.headline_N2="Итого"
+        p.orderRoom__totalCost.headline_N2="38\u00A0081₽"
+    div.orderRoom__fullGradientButtonWithArrow
+        +fullGradientButtonWithArrow("Забронировать")

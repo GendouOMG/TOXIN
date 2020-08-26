@@ -1,6 +1,55 @@
+.headline_N1 {
+    font-family: Quicksand, 'Open Sans', sans-serif;
+    font-style: normal;
+    // text-align: left;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    // text-transform: uppercase;
+    // color: opacify($DarkShade, 1);
+}
+
+.headline_N2 {
+    font-family: Quicksand, 'Open Sans', sans-serif;
+    font-style: normal;
+    // text-align: left;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: 700;
+    // text-transform: uppercase;
+    // color: opacify($DarkShade, 1);
+}
+
+.headline_N3 {
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-style: normal;
+    // text-align: left;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    // color: opacify($DarkShade, 1);
+}
+
+.text_Casual {
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-style: normal;
+    // text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    // text-transform: uppercase;
+    // color: opacify($DarkShade, 0.75);
+}
+
+
+
+
 @import "defaultColors/defaultColors.scss";
 @import "visually-hidden/visually-hidden.scss";
 @import "itemQuantityDropdown/itemQuantityDropdown.scss";
+@import "itemQuantityDropdown/itemQuantityDropdown.scss";
+@import "AirDatepicker/css/datepicker.scss";
 
 @import "inputTextField/inputTextField.scss";
 @import "defaultDpopdown/defaultDpopdown.scss";
@@ -18,4 +67,56 @@
 @import "simpleTextButton/simpleTextButton.scss";
 @import "fullGradientButtonWithArrow/fullGradientButtonWithArrow.scss";
 @import "rateButtonStars/rateButtonStars.scss";
+@import "dateSplitDropdown/dateSplitDropdown.scss";
+@import "bulletList/bulletList.scss";
+
 // @import "roomContainDropdown/roomContainDropdown.scss";
+
+
+//FONTS
+@font-face {
+    font-family: Quicksand; /* Имя шрифта */
+    src: url(fonts/Quicksand/Quicksand-Bold.eot); 
+    src: url(fonts/Quicksand/Quicksand-Bold.woff) format('woff'),
+    url(fonts/Quicksand/Quicksand-Bold.ttf) format('truetype'),
+    url(fonts/Quicksand/Quicksand-Bold.svg) format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat; /* Имя шрифта */
+    src: url(fonts/Montserrat/Montserrat-Bold.eot); 
+    src: url(fonts/Montserrat/Montserrat-Bold.woff) format('woff'),
+    url(fonts/Montserrat/Montserrat-Bold.ttf) format('truetype'),
+    url(fonts/Montserrat/Montserrat-Bold.svg) format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat; /* Имя шрифта */
+    src: url(fonts/Montserrat/Montserrat-Regular.eot); 
+    src: url(fonts/Montserrat/Montserrat-Regular.woff) format('woff'),
+    url(fonts/Montserrat/Montserrat-Regular.ttf) format('truetype'),
+    url(fonts/Montserrat/Montserrat-Regular.svg) format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans'; /* Имя шрифта */
+    src: url(fonts/OpenSans/OpenSans-Bold.eot); 
+    src: url(fonts/OpenSans/OpenSans-Bold.woff) format('woff'),
+    url(fonts/OpenSans/OpenSans-Bold.ttf) format('truetype'),
+    url(fonts/OpenSans/OpenSans-Bold.svg) format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+//INCLUDES
+
+@import "includes/searchRoom/searchRoom.scss";
+@import "includes/newRegistration/newRegistration.scss";
+@import "includes/orderRoom/orderRoom.scss";
+@import "includes/signIn/signIn.scss";

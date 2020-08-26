@@ -1,4 +1,7 @@
-mixin simpleTextButton(headline)
+mixin simpleTextButton(headline, colour='default')
     button.simpleTextButton
             span.simpleTextButton__buttonFix
-                p.simpleTextButton__textContain= headline
+                if (colour=='default')
+                    p.simpleTextButton__textContain= headline
+                else
+                    p.simpleTextButton__textContain.simpleTextButton__textContain--dark= headline

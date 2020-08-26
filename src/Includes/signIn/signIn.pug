@@ -1,0 +1,16 @@
+include ../../inputTextField/inputTextField
+include ../../toggleCheckboxList/toggleCheckboxList
+include ../../borderGradientButton/borderGradientButton
+
+form.signIn
+    h2.signIn__headline.headline_N1="Войти"
+    div.signIn__inputTextField
+        +inputTextField("Фамилия")
+    div.signIn__inputTextField
+        +inputTextField("Фамилия")
+    div.signIn__fullGradientButtonWithArrow
+        +fullGradientButtonWithArrow("Войти")
+    div.signIn__newAccount.text_Casual
+        p.signIn__newAccountTitle="Нет аккаунта на Toxin?"
+        div.signIn__newAccountCreate
+            +borderGradientButton("Создать")

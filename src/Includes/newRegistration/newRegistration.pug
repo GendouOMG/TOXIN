@@ -1,0 +1,27 @@
+include ../../inputTextField/inputTextField
+include ../../defaultRadioButtons/defaultRadioButtons
+include ../../toggleCheckboxList/toggleCheckboxList
+include ../../borderGradientButton/borderGradientButton
+
+form.newRegistration
+    h2.newRegistration__headline.headline_N1= "Регистрация аккаунта"
+    div.newRegistration__inputField
+        +inputTextField("Имя")
+    div.newRegistration__inputField
+        +inputTextField("Фамилия")
+    +defaultRadioButtons("Пол", "Мужчина","Женщина")
+    p.newRegistration__subHeadline.headline_N3= "Дата рождения"
+    div.newRegistration__inputField
+        +inputTextField("ДД.ММ.ГГГГ")
+    p.newRegistration__subHeadline.headline_N3= "Данные для входа в сервис"
+    div.newRegistration__inputField
+        +inputTextField("Email")
+    div.newRegistration__inputField
+        +inputTextField("Пароль")
+    +toggleCheckboxList("sendOffers","Получать спецпредложения")
+    div.newRegistration__fullGradientButtonWithArrow
+        +fullGradientButtonWithArrow("Перейти к оплате")
+    div.newRegistration__existingAccount
+        p.newRegistration__existingAccount-message= "Уже есть аккаунт на Toxin"
+        div.newRegistration__existingAccount-button
+            +borderGradientButton("Войти")

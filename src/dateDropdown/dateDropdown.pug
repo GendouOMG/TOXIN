@@ -7,10 +7,20 @@
 //- 		outline="none").inputTextField__content
 
 
-//	mixin: defaultDpopdown("YourHeadline","YourTextInsideInput")
+//	mixin: dateDropdown("YourHeadline1","YourTextInsideInput1","YourHeadline2","YourTextInsideInput2")
 
-mixin dateDropdown(headline,placeholder)
-	p.dateDropdown
-		p.dateDropdown__headline= headline
-		p.dateDropdown__content= placeholder
-			span.dateDropdown__arrowDown
+mixin dateDropdown(headline1='Прибытие',placeholder1='ДД.ММ.ГГГГ',headline2='Выезд',placeholder2='ДД.ММ.ГГГГ')
+	//- div.dateDropdown
+	//- 	p.dateDropdown__headline= headline
+	//- 	p.dateDropdown__content= placeholder
+	//- 		span.dateDropdown__arrowDown
+
+	ul.dateDropdown
+		li.dateDropdown__element
+			p.dateDropdown__headline.headline_N3= headline1
+			p.dateDropdown__content.text_Casual= placeholder1
+				span.dateDropdown__arrowDown
+		li.dateDropdown__element
+			p.dateDropdown__headline.headline_N3= headline2
+			p.dateDropdown__content.text_Casual= placeholder2
+				span.dateDropdown__arrowDown

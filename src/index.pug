@@ -5,11 +5,24 @@ html(lang="en")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width,initial-scale=1")
 		link(href="style.scss", rel="stylesheet")
-		link(href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap", rel="stylesheet")
-		link(href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap&subset=cyrillic", rel="stylesheet")
-		link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic", rel="stylesheet")
-	
+		//- link(href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap", rel="stylesheet")
+		//- link(href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap", rel="stylesheet")
+		//- link(href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap&subset=cyrillic", rel="stylesheet")
+		//- link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic", rel="stylesheet")
+
 	body
+
+		include bulletList/bulletList
+		+bulletList('Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00')
+
+		include includes/searchRoom/searchRoom
+
+		include includes/newRegistration/newRegistration
+
+		include includes/orderRoom/orderRoom
+
+		include includes/signIn/signIn
+
 		include inputTextField/inputTextField
 		+inputTextField("Text Field","Email")
 		
@@ -21,12 +34,12 @@ html(lang="en")
 		br
 
 		include dateDropdown/dateDropdown
-		+dateDropdown("date Dropdown","ДД.ММ.ГГГГ")
+		+dateDropdown("date Dropdown","ДД.ММ.ГГГГ","date Dropdown","19.08.2019")
 
 		br
 
 		include filterDateDropdown/filterDateDropdown
-		+filterDateDropdown("filter Date Dropdown","19 авг")
+		+filterDateDropdown("filter Date Dropdown","19 авг - 23 авг")
 
 		br
 
@@ -53,7 +66,7 @@ html(lang="en")
 		br
 
 		include defaultRadioButtons/defaultRadioButtons
-		+defaultRadioButtons("Radio Buttons", "Пол", "Мужчина","Женщина")
+		+defaultRadioButtons("Пол", "Мужчина","Женщина")
 
 		include toggleCheckboxList/toggleCheckboxList
 		+toggleCheckboxList("Toggle", "inputName", "Получать спецпредложения","Получать спецпредложения")
@@ -80,14 +93,24 @@ html(lang="en")
 		br
 		br
 		include guestQuantityDropdown/guestQuantityDropdown
+		+guestQuantityDropdown(1,0,2)
 		br
 		br
 		br
 		include roomContainDropdown/roomContainDropdown
+		+roomContainDropdown
 		br
 		br
 		br
 		br
+		include dateSplitDropdown/dateSplitDropdown
+		br
+		br
+		br
+		br
+		br
+		br
+		include dateSplitDropdown/dateSplitDropdown
 		br
 		br
 		br
@@ -96,7 +119,7 @@ html(lang="en")
 		script(src="/hiddenCheckboxList/hiddenCheckboxList.js")
 		script(src="/itemQuantityDropdown/itemQuantityDropdown.js")
 		script(src="/roomContainDropdown/roomContainDropdown.js")
-
+		script(src="/AirDatepicker/js/datepicker.js")
 
 
 	

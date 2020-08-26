@@ -1,0 +1,49 @@
+.searchRoom {
+    margin: 0;
+    padding: 39px 29px 29px 29px;
+    max-width: 320px;
+
+    position: relative;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    // box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.searchRoom__headline{
+    margin: 0 0 20px 0;
+    padding: 0;
+
+    // // text-transform: uppercase;
+    // color: opacify($DarkShade, 1);
+}
+
+.searchRoom__dateDropdown {
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.searchRoom__guestQuantityDropdownHeadline {
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+.searchRoom__guestQuantityDropdown {
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    height: 44px;
+
+    background-color: #FFFFFF;
+}
+
+.searchRoom__fullGradientButtonWithArrow {
+    margin: 31px 0 0 0;
+    padding: 0;
+}

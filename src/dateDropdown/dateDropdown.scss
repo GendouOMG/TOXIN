@@ -1,6 +1,23 @@
 .dateDropdown {
 	margin: 0;
 	padding: 0;
+
+	max-width: 320px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	list-style: none;
+    text-decoration: none;
+}
+
+.dateDropdown__element {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+    text-decoration: none;
 }
 
 .dateDropdown__headline {
@@ -19,7 +36,7 @@
 
 .dateDropdown__content {
 	margin: 0;
-	padding: 0 0 0 14px;
+	padding: 0 0 4px 13px;
 
 	display: flex;
 
@@ -52,11 +69,11 @@
 	padding: 0;
 
 	position: absolute;
-	top: 13px;
+	top: 14px;
 	right: 16px;
 
-	width: 8px;
-	height: 8px;
+	width: 7px;
+	height: 7px;
 
 	border: solid opacify($DarkShade, 0.5);
 	border-width: 0 2px 2px 0;
@@ -65,4 +82,10 @@
 
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
+}
+
+.dateDropdown__content:hover {
+	border: 1px solid opacify($DarkShade, 0.5);
+	box-sizing: border-box;
+	border-radius: 4px;
 }

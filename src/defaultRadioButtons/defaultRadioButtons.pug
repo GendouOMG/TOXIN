@@ -9,12 +9,10 @@
 //-         input(name="1",type="radio",value="Женщина")
 //-         div.defaultRadioButtons__title="Женщина"
 
-mixin defaultRadioButtons(headline, inputName, ...listElements)
-    div.defaultRadioButtons
-        p.defaultRadioButtons__headline= headline
-        ul.defaultRadioButtons__listBody
-            each listElement in listElements
-                li.defaultRadioButtons__listElement
-                    label.defaultRadioButtons__button
-                        input(name=inputName,type="radio",value=listElement)
-                        div.defaultRadioButtons__title=listElement
+mixin defaultRadioButtons(inputName, ...listElements)
+    ul.defaultRadioButtons
+        each listElement in listElements
+            li.defaultRadioButtons__listElement
+                label.defaultRadioButtons__button
+                    input(name=inputName,type="radio",value=listElement)
+                    div.defaultRadioButtons__title=listElement

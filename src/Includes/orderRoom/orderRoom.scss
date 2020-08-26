@@ -1,0 +1,201 @@
+.orderRoom {
+    margin: 0;
+    padding: 39px 29px 29px 29px;
+    max-width: 320px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    // box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.orderRoom__roomInfo {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.orderRoom__name {
+    margin: 0;
+    padding: 0;
+
+    font-family: Quicksand, 'Open Sans', sans-serif;
+    font-style: normal;
+    // text-align: left;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    // text-transform: uppercase;
+    color: opacify($DarkShade, 1);
+}
+
+.orderRoom__roomNumber {
+    margin: 0 0 0 0px;
+    padding: 0;
+}
+
+.orderRoom__roomType {
+    margin: 0 0 0 2px;
+    color: opacify($Purple, 1);
+}
+
+.orderRoom__costInfo {
+    margin: 0 0 1px 0;
+    padding: 0;
+
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-style: normal;
+    // text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    // text-transform: uppercase;
+    color: opacify($DarkShade, 0.5);
+}
+
+.orderRoom__roomPrice {
+    margin: 0 1px 0 0;
+    padding: 0;
+
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-style: normal;
+    // text-align: left;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    // text-transform: uppercase;
+    color: opacify($DarkShade, 0.5);
+}
+
+.orderRoom__dateDropdown {
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+.orderRoom__guestQuantityDropdownHeadline {
+    margin: 20px 0 5px 0;
+    padding: 0;
+}
+
+.orderRoom__guestQuantityDropdown {
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    height: 44px;
+
+    background-color: #FFFFFF;
+}
+
+.orderRoom__fee {
+    margin: 17px 0 0 0;
+    padding: 0;
+
+    list-style: none;
+    text-decoration: none;
+}
+
+.orderRoom__feeItem {
+    margin: 10px 0 10px 1px;
+    padding: 0;
+
+    display: flex;
+    color: opacify($DarkShade, 0.75);
+}
+
+.orderRoom__feeTitle {
+    margin: 0;
+    padding: 0;
+
+    max-width: 214px;
+}
+
+.orderRoom__feeCost {
+    margin: 0 0 0 5px;
+    padding: 0;
+
+    flex: 1 1 auto;
+    text-align: right;
+}
+
+.orderRoom__infoIcon{
+    cursor: pointer;
+    margin: 0px 0 0 5px;
+    padding: 0;
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-style: normal;
+    // text-align: left;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    // text-transform: uppercase;
+    color: opacify($DarkShade, 0.25);
+
+}
+
+.orderRoom__total {
+    margin: 30px 0 20px 0;
+    padding: 0;
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.orderRoom__total::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px dashed opacify($DarkShade, 0.25);
+    box-sizing: border-box;
+}
+
+.orderRoom__totalTitle,
+.orderRoom__totalCost {
+    position: relative;
+    background: #FFFFFF;
+}
+
+.orderRoom__totalTitle {
+    margin: 0;
+    padding: 0 5px 0 1px;
+}
+
+.orderRoom__totalCost {
+    margin: 0;
+    padding: 0 1px 0 5px;
+}
+
+.orderRoom__fullGradientButtonWithArrow {
+    margin: 0;
+    padding: 0;
+}
+
+
+// .....MODS.....
+
+.orderRoom__feeItem--last {
+    margin: 13px 0 0 1px;
+    line-height: 18px;
+}

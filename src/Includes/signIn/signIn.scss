@@ -1,0 +1,48 @@
+.signIn {
+    margin: 0;
+    padding: 39px 29px 32px 29px;
+    max-width: 320px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    // box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.signIn__headline {
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.signIn__inputTextField {
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.signIn__fullGradientButtonWithArrow {
+    margin: 20px 0 29px 0;
+    padding: 0;
+}
+
+.signIn__newAccount {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signIn__newAccountTitle {
+    margin: 0;
+    padding: 0;
+}
+
+.signIn__newAccountCreate {
+    margin: 0 0 0 0 ;
+    padding: 0;
+
+    position: relative;
+    top: 1px;
+}

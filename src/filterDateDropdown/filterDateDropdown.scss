@@ -19,7 +19,7 @@
 
 .filterDateDropdown__content {
 	margin: 0;
-	padding: 0 0 0 14px;
+	padding: 0 0 2px 14px;
 
 	display: flex;
 
@@ -50,15 +50,18 @@
 .filterDateDropdown__arrowDown {
 	margin: 0;
 	padding: 0;
+
 	position: absolute;
+	top: 15px;
+	right: 16px;
+
+	width: 7px;
+	height: 7px;
 
 	border: solid opacify($DarkShade, 0.5);
 	border-width: 0 2px 2px 0;
 	display: inline-block;
-	padding: 4px;
-
-	top: 14px;
-	right: 16px;
+	// padding: 3px;
 
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);

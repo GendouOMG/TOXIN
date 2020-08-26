@@ -1,12 +1,13 @@
 .itemQuantityDropdown {
+    margin: 0px;
+    padding: 0px;
+
     position: relative;
     min-width: 150px;
     width: 100%;
     // width: 320px;
 
-    margin: 0px;
-    padding: 0px;
-
+    background-color: #FFFFFF;
     border: 1px solid opacify($DarkShade, 0.25);;
     box-sizing: border-box;
     border-radius: 4px;
@@ -102,6 +103,11 @@
     margin: 0;
     padding: 0;
 
+    // background-color: white;
+    // width: 100%;
+    // position: absolute;
+    // z-index: 5;
+
     list-style: none;
     text-decoration: none;
 
@@ -114,6 +120,7 @@
 	text-transform: uppercase;
     color: opacify($DarkShade, 1);
     
+    background-color: #FFFFFF;
     border-top: 1px solid opacify($DarkShade, 0.5);
 }
 
@@ -202,7 +209,7 @@
 /* controlButtons */
 
 .itemQuantityDropdown__controlButtons {
-    margin: 29px 7px 13px 13px;
+    margin: 29px 7px 11px 13px;
     padding: 0;
 
     display: flex;

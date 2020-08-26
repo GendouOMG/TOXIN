@@ -7,9 +7,7 @@
 //- 		outline="none").inputTextField__content
 
 
-//	mixin: inputTextField("YourHeadline","YourTextInsideInput")
+//	mixin: inputTextField("YourTextInsideInput")
 
-mixin inputTextField(headline,placeholder)
-	p.inputTextField
-		p.inputTextField__headline= headline
-		input(placeholder= placeholder).inputTextField__content
+mixin inputTextField(placeholder)
+	input(placeholder= placeholder).inputTextField
