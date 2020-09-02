@@ -1,0 +1,6 @@
+mixin roomFeatures(title='',content='',img_src='')
+    div.roomFeatures
+        span.roomFeatures__icon(style=`background-image: url(${img_src})`)
+        div.roomFeatures__description
+            p.roomFeatures__title.text_Casual=title
+            p.roomFeatures__content.text_Casual=content

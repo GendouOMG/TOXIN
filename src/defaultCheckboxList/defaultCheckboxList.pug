@@ -1,14 +1,8 @@
-//- div.defaultCheckboxList
-//- 	p.defaultCheckboxList__headline= "checkbox buttons"
-//- 	ul.defaultCheckboxList__listBody
-//- 		li.defaultCheckboxList__listElement
-//- 			+checkboxButtons("Можно курить")
-//- 		li.defaultCheckboxList__listElement
-//- 			+checkboxButtons("Можно")
-//- 		li.defaultCheckboxList__listElement
-//- 			+checkboxButtons("Можно")
-//- 		li.defaultCheckboxList__listElement
-//- 			+checkboxButtons("Можно")
+//- checkboxButtons.scss
+//- checkboxButtons.pug
+
+include ../checkboxButtons/checkboxButtons.pug
+
 
 mixin defaultCheckboxList(headline, ...listElements)
 	div.defaultCheckboxList

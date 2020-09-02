@@ -1,0 +1,42 @@
+.roomFeatures {
+    margin: 0;
+    padding: 20px 10px 20px 0px;
+
+    display: flex;
+
+    border-bottom: 1px solid opacify($DarkShade, 0.1);
+}
+
+.roomFeatures__icon {
+    margin: 0;
+    padding: 0;
+
+    display: block;
+
+    width: 48px;
+    height: 48px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.roomFeatures__description {
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.roomFeatures__title {
+    margin: 0;
+    padding: 0;
+
+    font-weight: 700;
+    color: opacify($DarkShade, 0.75);
+}
+
+.roomFeatures__content {
+    margin: 0;
+    padding: 0;
+
+    color: opacify($DarkShade, 0.75);
+}

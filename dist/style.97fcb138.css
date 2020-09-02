@@ -1568,7 +1568,7 @@
 .hiddenCheckboxList__headline {
   position: relative;
   cursor: pointer;
-  margin: 0 0 17px 0;
+  margin: 0 0 18px 0;
   padding: 0;
   font-family: Montserrat;
   font-style: normal;
@@ -2317,11 +2317,95 @@
   margin: 0;
   padding: 0; }
 
+.review {
+  margin: 0;
+  padding: 0;
+  min-width: 320px; }
+
+.review__person {
+  margin: 0;
+  padding: 0;
+  display: flex; }
+
+.review__avatar {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+          filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.review__info {
+  margin: 0 0 0 10px;
+  padding: 0; }
+
+.review__name {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  color: rgba(31, 32, 65, 0.75); }
+
+.review__date {
+  margin: 0;
+  padding: 0;
+  color: rgba(31, 32, 65, 0.75); }
+
+.review__content {
+  margin: 12px 0 0 0;
+  padding: 0;
+  display: flex; }
+
+.review__likeButton {
+  margin: 0;
+  padding: 0 4px; }
+
+.review__text {
+  margin: -2px 0 0 10px;
+  padding: 0; }
+
+.roomFeatures {
+  margin: 0;
+  padding: 20px 10px 20px 0px;
+  display: flex;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
+
+.roomFeatures__icon {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto; }
+
+.roomFeatures__description {
+  margin: 0 0 0 10px;
+  padding: 0; }
+
+.roomFeatures__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  color: rgba(31, 32, 65, 0.75); }
+
+.roomFeatures__content {
+  margin: 0;
+  padding: 0;
+  color: rgba(31, 32, 65, 0.75); }
+
 @font-face {
   font-family: Quicksand;
   /* Имя шрифта */
   src: url(/Quicksand-Bold.c9975706.eot);
-  src: url(/Quicksand-Bold.1ad35feb.woff) format("woff"), url(/Quicksand-Bold.b48bd0f5.ttf) format("truetype"), url(/Quicksand-Bold.01d21a48.svg) format("svg");
+  src: url(/Quicksand-Bold.b48bd0f5.ttf) format("truetype"), url(/Quicksand-Bold.1ad35feb.woff) format("woff"), url(/Quicksand-Bold.01d21a48.svg) format("svg");
   font-weight: 700;
   font-style: normal; }
 
@@ -2329,7 +2413,7 @@
   font-family: Montserrat;
   /* Имя шрифта */
   src: url(/Montserrat-Bold.09fd9a3b.eot);
-  src: url(/Montserrat-Bold.0a2db7ac.woff) format("woff"), url(/Montserrat-Bold.7b6d8695.ttf) format("truetype"), url(/Montserrat-Bold.7207dbfe.svg) format("svg");
+  src: url(/Montserrat-Bold.7b6d8695.ttf) format("truetype"), url(/Montserrat-Bold.0a2db7ac.woff) format("woff"), url(/Montserrat-Bold.7207dbfe.svg) format("svg");
   font-weight: 700;
   font-style: normal; }
 
@@ -2337,7 +2421,7 @@
   font-family: Montserrat;
   /* Имя шрифта */
   src: url(/Montserrat-Regular.816c7b27.eot);
-  src: url(/Montserrat-Regular.f0ef367f.woff) format("woff"), url(/Montserrat-Regular.104dc861.ttf) format("truetype"), url(/Montserrat-Regular.4e28c498.svg) format("svg");
+  src: url(/Montserrat-Regular.104dc861.ttf) format("truetype"), url(/Montserrat-Regular.f0ef367f.woff) format("woff"), url(/Montserrat-Regular.4e28c498.svg) format("svg");
   font-weight: 400;
   font-style: normal; }
 

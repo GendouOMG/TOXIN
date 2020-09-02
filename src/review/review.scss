@@ -1,0 +1,72 @@
+.review {
+    margin: 0;
+    padding: 0;
+
+    min-width: 320px;
+}
+
+.review__person {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+}
+
+.review__avatar {
+    margin: 0;
+    padding: 0;
+
+    display: block;
+
+    width: 48px;
+    height: 48px;
+
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 50%;
+    filter: drop-shadow(0px 10px 20px opacify($DarkShade, 0.1));
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.review__info {
+    margin: 0 0 0 10px;
+    padding: 0;
+
+}
+
+.review__name {
+    margin: 0;
+    padding: 0;
+
+    font-weight:700;
+    color: opacify($DarkShade, 0.75);
+}
+
+.review__date {
+    margin: 0;
+    padding: 0;
+
+    color: opacify($DarkShade, 0.75);
+}
+
+.review__content {
+    margin: 12px 0 0 0;
+    padding: 0;
+
+    display: flex;
+}
+
+.review__likeButton {
+    margin: 0;
+    padding: 0 4px;
+}
+
+.review__text {
+    margin: -2px 0 0 10px;
+    padding: 0;
+
+}

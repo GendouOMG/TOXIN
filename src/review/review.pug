@@ -1,0 +1,17 @@
+include ../likeButton/likeButton.pug
+
+mixin review(reviewName='', reviewDate='', reviewText='', likeID='', likeNum=0, img_src='')
+    div.review
+        div.review__person
+            span.review__avatar(style=`background-image: url(${img_src})`)
+            div.review__info
+                div.review__name.text_Casual=reviewName
+                div.review__date.text_Casual=reviewDate
+        div.review__content
+            div.review__likeButton
+                +likeButton(likeID, likeNum)
+            div.review__text.text_Casual=reviewText
+        
+
+
+//- +likeButton("LikeId2",12)
