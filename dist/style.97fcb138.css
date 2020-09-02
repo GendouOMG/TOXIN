@@ -2401,6 +2401,98 @@
   padding: 0;
   color: rgba(31, 32, 65, 0.75); }
 
+.pagination {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.pagination__pageList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  text-decoration: none; }
+
+.pagination__page {
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5); }
+
+.pagination__caption {
+  margin: 9px 0 0 0;
+  padding: 0;
+  color: rgba(31, 32, 65, 0.75); }
+
+.pagination__page:hover {
+  opacity: 0.75; }
+
+.pagination__page--current {
+  font-weight: 700;
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border: 0px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 50%; }
+
+.pagination__page--next {
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 0px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 50%; }
+
+.pagination__arrow {
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 14px;
+  top: 20px;
+  width: 14px;
+  height: 2px;
+  background-color: #FFFFFF; }
+
+.pagination__arrow::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  margin: 0;
+  padding: 0;
+  width: 11px;
+  height: 2px;
+  background-color: #FFFFFF;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); }
+
+.pagination__arrow::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: -3px;
+  margin: 0;
+  padding: 0;
+  width: 11px;
+  height: 2px;
+  background-color: #FFFFFF;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); }
+
+.pagination__arrow--left {
+  transform: rotate(180deg); }
+
 @font-face {
   font-family: Quicksand;
   /* Имя шрифта */

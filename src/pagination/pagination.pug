@@ -1,0 +1,35 @@
+mixin pagination(currentPage=1, lastPage=1, captionText)
+    div.pagination
+        ul.pagination__pageList
+            if (currentPage != 1)
+                li.pagination__page.headline_N3.pagination__page--next
+                    span.pagination__arrow.pagination__arrow--left
+                if(currentPage > 2)
+                    li.pagination__page.headline_N3 1
+                    if(currentPage > 3)
+                        if(currentPage > 4)
+                            li.pagination__page.headline_N3 ...
+                        else
+                            li.pagination__page.headline_N3 2
+
+                li.pagination__page.headline_N3=(currentPage-1)
+
+            if (currentPage != lastPage)
+                li.pagination__page.headline_N3.pagination__page--current=currentPage
+                
+                if(currentPage != lastPage-1)
+                    li.pagination__page.headline_N3=(currentPage+1)
+                    if(currentPage == 1)
+                        li.pagination__page.headline_N3=(currentPage+2)
+                    if(currentPage != lastPage-2)
+                        if(currentPage != lastPage-3)
+                            li.pagination__page.headline_N3 ...
+                        else
+                            li.pagination__page.headline_N3=lastPage-1
+                li.pagination__page.headline_N3=lastPage
+                li.pagination__page.headline_N3.pagination__page--next
+                    span.pagination__arrow
+            else
+                li.pagination__page.headline_N3.pagination__page--current=currentPage
+
+        p.pagination__caption.text_Casual=captionText

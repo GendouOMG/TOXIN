@@ -12,6 +12,9 @@ html(lang="en")
 
 	body
 
+		include pagination/pagination
+		+pagination(1,15,'1 – 12 из 100+ вариантов аренды')
+
 		include roomFeatures/roomFeatures
 		+roomFeatures('Комфорт','Шумопоглощающие стены', 'img/icons/insert_emoticon.png')
 		+roomFeatures('Удобство','Окно в каждой из спален', 'img/icons/location_city.png')
