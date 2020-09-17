@@ -1,0 +1,46 @@
+//- +roomCard(
+//-     roomNumber=0, //Номер комнаты
+//-     roomType="", //Тип комнаты
+//-     roomPrice=0, //Стоимость комнаты в сутки
+//-     rateID="", //ID оценки комнаты
+//-     rateStars=0, //Оценка комнаты, по умолчанию 0
+//-     rateNumber=0, //Количество оценок, по умолчанию 0
+//-     listElements, //ссылки на фото комнат
+//- )
+
+
+
+include ../rateButtonStars/rateButtonStars.pug
+
+mixin roomCard(roomNumber, roomType="Люкс", roomPrice=0, rateID="noID", rateStars=0, rateNumber=0, ...listElements)
+    div.roomCard
+        div.roomCard__gallery
+            ul.roomCard__photoList.roomCard__photoList--noJs
+                //- li.roomCard__photo(style=`background-image: url(${img_src})`)
+                    //- div.roomCard__photo(style=`background-image: url(${img_src})`)
+                    //- button(type="button").roomCard__punktButton
+                //- li.roomCard__photo(style=`background-image: url(${img_src1})`)
+                    //- div.roomCard__photo(style=`background-image: url(${img_src1})`)
+                    //- button(type="button").roomCard__punktButton
+                each listElement in listElements
+                     li.roomCard__photo(style=`background-image: url(${listElement})`)
+            ul.roomCard__punktMarkList
+                each listElement in listElements
+                    li.roomCard__punktMark
+                //- li.roomCard__punktMark
+            button(type="button").roomCard__scrollButton.roomCard__scrollButton--left
+            button(type="button").roomCard__scrollButton.roomCard__scrollButton--right
+        div.roomCard__roomInfo
+            p.roomCard__roomName='№\u00A0'
+                span.roomCard__roomNumber.headline_N2=roomNumber
+                span.roomCard__roomType.headline_N3="\u00A0"+roomType
+            p.roomCard__costInfo 
+                span.roomCard__roomPrice=roomPrice
+                ="\u00A0в сутки"
+        div.roomCard__roomRate
+            div.roomCard__rateButtonStars
+                +rateButtonStars(rateID,rateStars)
+            p.roomCard__reviews.text_Casual
+                span.roomCard__reviewsNumber=rateNumber
+                =" Отзывов"
+            

@@ -117,74 +117,67 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"roomCard/roomCard.js":[function(require,module,exports) {
+$(document).ready(function () {
+  var nextButton = '.roomCard__scrollButton--right';
+  var pevButton = '.roomCard__scrollButton--left';
+  $(this).find('.roomCard__photoList').each(function () {
+    $(this).removeClass('roomCard__photoList--noJs'); //Если JS подключен, снимаем класс-заглушку
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+    $(this).find('.roomCard__photo:first').addClass('roomCard__photo--current'); //Если JS подключен, ставим первому фото класс Current
 
-  return bundleURL;
-}
+    $(this).parent().find('.roomCard__punktMark:first').addClass('roomCard__punktMark--current'); //Если JS подключен, ищем первую метку и ставим ей класс Current
+  }); // $(nextButton).click(function(){
+  //     let $currentPhoto = $(this).parent().find('.roomCard__photo.roomCard__photo--current');
+  //     $currentPhoto.removeClass('roomCard__photo--current');
+  //     $currentPhoto.next('.roomCard__photo').addClass('roomCard__photo--current');
+  //     if ( $(this).parent().find('.roomCard__photo').last().hasClass("roomCard__photo--current") ) {
+  //         $currentPhoto.removeClass('roomCard__photo--current');
+  //         $(this).parent().find('.roomCard__photo').first().addClass('roomCard__photo--current');
+  //     }
+  //     if ($currentPhoto.next('.roomCard__photo').get(0)) {
+  //         $(this).parent().find('.roomCard__photo:first').addClass('roomCard__photo--current');
+  //     }
+  // });
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+  $(nextButton).click(function () {
+    var $currentPhoto = $(this).parent().find('.roomCard__photo.roomCard__photo--current'); //Поиск относительно нажатой кнопки первого фото с классом Current
 
-    if (matches) {
-      return getBaseURL(matches[0]);
+    var $currentMark = $(this).parent().find('.roomCard__punktMark.roomCard__punktMark--current'); //Поиск относительно нажатой кнопки первой метки с классом Current
+
+    if ($(this).parent().find('.roomCard__photo').last().hasClass("roomCard__photo--current")) {
+      $currentPhoto.removeClass('roomCard__photo--current');
+      $(this).parent().find('.roomCard__photo').first().addClass('roomCard__photo--current');
+      $currentMark.removeClass('roomCard__punktMark--current');
+      $(this).parent().find('.roomCard__punktMark').first().addClass('roomCard__punktMark--current');
+      ;
+    } else {
+      $currentPhoto.removeClass('roomCard__photo--current');
+      $currentPhoto.next('.roomCard__photo').addClass('roomCard__photo--current');
+      $currentMark.removeClass('roomCard__punktMark--current');
+      $currentMark.next('.roomCard__punktMark').addClass('roomCard__punktMark--current');
     }
-  }
+  });
+  $(pevButton).click(function () {
+    var $currentPhoto = $(this).parent().find('.roomCard__photo.roomCard__photo--current'); //Поиск относительно нажатой кнопки первого фото с классом Current
 
-  return '/';
-}
+    var $currentMark = $(this).parent().find('.roomCard__punktMark.roomCard__punktMark--current'); //Поиск относительно нажатой кнопки первой метки с классом Current
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
+    if ($(this).parent().find('.roomCard__photo').first().hasClass("roomCard__photo--current")) {
+      $currentPhoto.removeClass('roomCard__photo--current');
+      $(this).parent().find('.roomCard__photo').last().addClass('roomCard__photo--current');
+      $currentMark.removeClass('roomCard__punktMark--current');
+      $(this).parent().find('.roomCard__punktMark').last().addClass('roomCard__punktMark--current');
+      ;
+    } else {
+      $currentPhoto.removeClass('roomCard__photo--current');
+      $currentPhoto.prev('.roomCard__photo').addClass('roomCard__photo--current');
+      $currentMark.removeClass('roomCard__punktMark--current');
+      $currentMark.prev('.roomCard__punktMark').addClass('roomCard__punktMark--current');
     }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  });
+});
+},{}],"C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -388,5 +381,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/index.js.map
+},{}]},{},["C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","roomCard/roomCard.js"], null)
+//# sourceMappingURL=/roomCard.492bc30a.js.map
