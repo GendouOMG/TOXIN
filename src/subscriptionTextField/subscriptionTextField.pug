@@ -7,10 +7,9 @@
 //- 		outline="none").inputTextField__content
 
 
-//	mixin: defaultDpopdown("YourHeadline","YourTextInsideInput")
+//-	mixin: defaultDpopdown("YourHeadline","YourTextInsideInput")
 
-mixin subscriptionTextField(headline,placeholder)
-	p.subscriptionTextField
-		p.subscriptionTextField__headline= headline
-		div.subscriptionTextField__content= placeholder
-			div.subscriptionTextField__arrowGradient
+mixin subscriptionTextField(placeholder)
+	div.subscriptionTextField
+		div.subscriptionTextField__arrowGradient
+		input.subscriptionTextField__content.text_Casual(type="text", placeholder= placeholder)

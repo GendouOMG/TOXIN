@@ -39,13 +39,3 @@
 .fullGradientButton:active {
     opacity: 0.5;
 }
-
-.fullGradientButton > .fullGradientButton__buttonFix,
-.fullGradientButton:active > .fullGradientButton__buttonFix,
-.fullGradientButton:focus > .fullGradientButton__buttonFix {
-    margin: 0;
-    padding: 0;
-    position:relative;
-    top: 0;
-    left: 0;
-}

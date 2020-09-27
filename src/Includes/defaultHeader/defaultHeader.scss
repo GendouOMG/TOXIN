@@ -1,0 +1,207 @@
+.defaultHeader {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 70px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px opacify($DarkShade, 0.05);
+}
+
+.defaultHeader__innerWrapper {
+    margin: 0;
+    padding: 0 140px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1160px;
+    height: 70px;
+}
+
+.defaultHeader__logoLink {
+    margin: 0;
+    padding: 0;
+}
+
+.defaultHeader__logo {
+    margin: 0;
+    padding: 0;
+
+    display: block;
+
+    width: 106px;
+    height: 40px;
+}
+
+///////
+
+.defaultHeader__content {
+    margin: 0;
+    padding: 0;
+}
+
+.defaultHeader__nav {
+    margin: 0;
+    padding: 0;
+}
+
+.defaultHeader__navList {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    list-style: none;
+    text-decoration: none;
+}
+
+.defaultHeader__navElement {
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 34px;
+
+    color: opacify($DarkShade, 0.5);
+}
+
+.defaultHeader__navLink {
+    margin: 0;
+    padding: 0;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.defaultHeader__arrowDown {
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+
+    display: block;
+    width: 24px;
+    height: 21px;
+    // border-bottom: 2px solid opacify($DarkShade, 0.5);
+    // border-right: 2px solid opacify($DarkShade, 0.5);
+
+    // transform: rotate(45deg);
+}
+
+.defaultHeader__innerList {
+    margin: 0;
+    padding: 5px;
+
+    position: absolute;
+    left: 0px;
+    top: 33px;
+
+    display: flex;
+    max-width: 200px;
+
+    list-style: none;
+    text-decoration: none;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.defaultHeader__innerElement{
+    margin: 5px 5px 5px 5px;
+    padding: 0;
+
+    color: opacify($DarkShade, 0.5);
+}
+
+.defaultHeader__innerLink {
+    margin: 0;
+    padding: 0;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+///
+
+// .defaultHeader__navElement:last-child {
+//     margin: 0;
+//     padding: 0;
+// }
+
+.defaultHeader__navElement + .defaultHeader__navElement {
+    margin-left: 20px;
+}
+
+.defaultHeader__navElement--current {
+    margin: 0 3px 0 0;
+
+    font-weight: 700;
+    color: opacify($DarkShade, 0.75);
+}
+
+.defaultHeader__arrowDown::after {
+	content: '';
+
+	position: absolute;
+	top: 4px;
+	left: 7px;
+
+	margin: 0;
+	padding: 0;
+
+	width: 7px;
+    height: 7px;
+    
+    border-bottom: 2px solid opacify($DarkShade, 0.5);
+    border-right: 2px solid opacify($DarkShade, 0.5);
+
+    transform: rotate(45deg);
+}
+
+.defaultHeader__navElement .defaultHeader__innerList {
+    display: none;
+}
+
+.defaultHeader__navElement:hover .defaultHeader__innerList {
+    display: block;
+}
+
+.defaultHeader__innerList:hover {
+    display: block;
+}
+
+.defaultHeader__navElement:hover .defaultHeader__navLink,
+.defaultHeader__innerElement:hover .defaultHeader__innerLink {
+    color: opacify($Purple, 1);
+}
+
+.defaultHeader__navList .defaultHeader__navElement--userName {
+    padding: 0 0 0 20px;
+    border-left: 1px solid opacify($DarkShade, 0.1);
+}
+
+
+@media (max-width: $desktop-width) {
+    .defaultHeader__innerWrapper {
+        padding: 0 20px;
+    }
+
+    .defaultHeader__navElement + .defaultHeader__navElement {
+        margin-left: 10px;
+    }
+
+}

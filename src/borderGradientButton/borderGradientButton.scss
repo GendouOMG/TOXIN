@@ -60,13 +60,3 @@
 .borderGradientButton:active .borderGradientButton__hover {
     box-shadow: 0px 0px 0px 2px opacify(rgba(#FFF,0), 0.5);
 }
-
-.borderGradientButton > .borderGradientButton__buttonFix,
-.borderGradientButton:active .borderGradientButton__buttonFix,
-.borderGradientButton:focus .borderGradientButton__buttonFix {
-    margin: 0;
-    padding: 0;
-    position:relative;
-    top: 0;
-    left: 0;
-}

@@ -1,3 +1,12 @@
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .headline_N1 {
     font-family: Quicksand, 'Open Sans', sans-serif;
     font-style: normal;
@@ -42,6 +51,13 @@
     // color: opacify($DarkShade, 0.75);
 }
 
+.wrapper {
+    margin: 0 auto;
+    padding: 0 140px;
+
+    max-width: 1160px;
+}
+
 
 
 
@@ -73,6 +89,7 @@
 @import "roomFeatures/roomFeatures.scss";
 @import "pagination/pagination.scss";
 @import "roomCard/roomCard.scss";
+@import "gradientButton/gradientButton.scss";
 
 // @import "roomContainDropdown/roomContainDropdown.scss";
 
@@ -124,3 +141,5 @@
 @import "includes/newRegistration/newRegistration.scss";
 @import "includes/orderRoom/orderRoom.scss";
 @import "includes/signIn/signIn.scss";
+@import "includes/defaultHeader/defaultHeader.scss";
+@import "includes/defaultFooter/defaultFooter.scss";

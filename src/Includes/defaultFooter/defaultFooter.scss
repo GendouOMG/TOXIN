@@ -1,0 +1,164 @@
+.defaultFooter {
+    margin: 104px 0 0 0;
+    padding: 0;
+
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px opacify($DarkShade, 0.05);
+}
+
+.defaultFooter__main {
+    margin: 0 auto 97px auto;
+    padding: 0 140px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    max-width: 1160px;
+}
+
+.defaultFooter__about {
+    margin: -4px 0 0 0;
+    padding: 0;
+
+    width: 100%;
+    max-width: 260px;
+}
+
+.defaultFooter__logoLink {
+    margin: 0;
+    padding: 0;
+}
+
+.defaultFooter__logo {
+    margin: 0 0 13px 0;
+    padding: 0;
+
+    width: 106px;
+    height: 40px;
+}
+
+.defaultFooter__nav {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    max-width: 160px;
+}
+
+.defaultFooter__headline {
+    margin: 0 0 18px 0;
+    padding: 0;
+}
+
+.defaultFooter__navList {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    text-decoration: none;
+}
+
+.defaultFooter__navElement {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+
+    color: opacify($DarkShade, 0.5);
+
+    +.defaultFooter__navElement {
+        margin-top: 14px;
+    }
+}
+
+.defaultFooter__navLink {
+    margin: 0;
+    padding: 0;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.defaultFooter__subscription {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    max-width: 260px;
+}
+
+.defaultFooter__subscriptionTextField {
+    margin: 23px 0 0 0;
+    padding: 0;
+}
+
+.defaultFooter__caption{
+    margin: 0;
+    padding: 0;
+
+    color: opacify($DarkShade, 0.75);
+}
+
+///////////////////////////////////////////
+.defaultFooter__social {
+    margin: 0;
+    padding: 0;
+    
+    width: 100%;
+    height: 71px;
+
+    border-top: 1px solid opacify($DarkShade, 0.25);
+}
+
+.defaultFooter__socialWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+}
+
+.defaultFooter__copyright {
+    margin: 0;
+    padding: 0;
+    
+
+    color: opacify($DarkShade, 0.75);;
+}
+
+.defaultFooter__socialNetList {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    list-style: none;
+    text-decoration: none;
+}
+
+.defaultFooter__socialNetElement {
+    margin: 0;
+    padding: 0;
+
+    +.defaultFooter__socialNetElement{
+        margin-left: 20px;
+    }
+}
+
+.defaultFooter__socialNetLink {
+    margin: 0;
+    padding: 0;
+
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.defaultFooter__socialNetIcon {
+    margin: 0;
+    padding: 0;
+
+    display: block;
+}
+

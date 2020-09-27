@@ -1,0 +1,33 @@
+doctype html
+
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width,initial-scale=1")
+		link(href="landing.scss", rel="stylesheet")
+		//- link(href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap", rel="stylesheet")
+		//- link(href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap", rel="stylesheet")
+		//- link(href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap&subset=cyrillic", rel="stylesheet")
+		//- link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic", rel="stylesheet")
+
+	body
+
+		div.headerWrapper
+			include includes/defaultHeader/defaultHeader
+		div.landingWrapper
+			div.orderRoomWrapper
+				include includes/searchRoom/searchRoom
+		div.footerWrapper
+			include includes/defaultFooter/defaultFooter
+
+
+		script(src="https://code.jquery.com/jquery-3.5.1.min.js")
+		script(src="/hiddenCheckboxList/hiddenCheckboxList.js")
+		script(src="/itemQuantityDropdown/itemQuantityDropdown.js")
+		script(src="/roomContainDropdown/roomContainDropdown.js")
+		script(src="/AirDatepicker/js/datepicker.js")
+		script(src="/roomCard/roomCard.js")
+		
+
+
+	

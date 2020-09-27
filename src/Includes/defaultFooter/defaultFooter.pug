@@ -1,0 +1,58 @@
+include ../../subscriptionTextField/subscriptionTextField.pug
+
+footer.defaultFooter
+    div.defaultFooter__main
+        div.defaultFooter__about
+            a.defaultFooter__logoLink(href="#")
+                img.defaultFooter__logo(src="/img/ToxinLogo.svg", alt="Logo")
+            p.defaultFooter__caption.text_Casual="Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
+        div.defaultFooter__nav
+            h3.defaultFooter__headline.headline_N3="Навигация"
+            ul.defaultFooter__navList
+                li.defaultFooter__navElement
+                    a.defaultFooter__navLink.text_Casual(href="#")="О нас"
+                li.defaultFooter__navElement
+                    a.defaultFooter__navLink.text_Casual(href="#")="Новости"
+                li.defaultFooter__navElement
+                    a.defaultFooter__navLink.text_Casual(href="#")="Служба поддержки"
+                li.defaultFooter__navElement
+                    a.defaultFooter__navLink.text_Casual(href="#")="Услуги"
+        div.defaultFooter__nav
+            h3.defaultFooter__headline.headline_N3="О нас"
+            ul.defaultFooter__navList
+                li.defaultFooter__navElement
+                    a.defaultFooter__navLink.text_Casual(href="#")="О сервисе"
+                li.defaultFooter__navElement
+                    a.defaultFooter__navLink.text_Casual(href="#")="Наша команда"
+                li.defaultFooter__navElement
+                    a.defaultFooter__navLink.text_Casual(href="#")="Вакансии"
+                li.defaultFooter__navElement
+                    a.defaultFooter__navLink.text_Casual(href="#")="Инвесторы"
+        div.defaultFooter__nav
+            h3.defaultFooter__headline.headline_N3="Служба поддержки"
+            ul.defaultFooter__navList
+                li.defaultFooter__navElement
+                    a.defaultFooter__navLink.text_Casual(href="#")="Соглашения"
+                li.defaultFooter__navElement
+                    a.defaultFooter__navLink.text_Casual(href="#")="Соглашения"
+                li.defaultFooter__navElement
+                    a.defaultFooter__navLink.text_Casual(href="#")="Соглашения"
+        form.defaultFooter__subscription
+            h3.defaultFooter__headline.headline_N3="Подписка"
+            P.defaultFooter__caption.text_Casual="Получайте специальные предложения и новости сервиса"
+            div.defaultFooter__subscriptionTextField
+                +subscriptionTextField('Email')
+
+    div.defaultFooter__social
+        div.defaultFooter__socialWrapper.wrapper
+            p.defaultFooter__copyright.text_Casual="Copyright © 2018 Toxin отель. Все права защищены."
+            ul.defaultFooter__socialNetList
+                li.defaultFooter__socialNetElement
+                    a.defaultFooter__socialNetLink(href="#")
+                        img.defaultFooter__socialNetIcon(src="/img/TwitterIcon.png", alt="Twitter")
+                li.defaultFooter__socialNetElement
+                    a.defaultFooter__socialNetLink(href="#")
+                        img.defaultFooter__socialNetIcon(src="/img/facebookIcon.png", alt="facebook")
+                li.defaultFooter__socialNetElement
+                    a.defaultFooter__socialNetLink(href="#")
+                        img.defaultFooter__socialNetIcon(src="/img/instagramIcon.png", alt="instagram")

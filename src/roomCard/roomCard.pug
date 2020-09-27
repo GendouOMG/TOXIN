@@ -16,18 +16,11 @@ mixin roomCard(roomNumber, roomType="Люкс", roomPrice=0, rateID="noID", rate
     div.roomCard
         div.roomCard__gallery
             ul.roomCard__photoList.roomCard__photoList--noJs
-                //- li.roomCard__photo(style=`background-image: url(${img_src})`)
-                    //- div.roomCard__photo(style=`background-image: url(${img_src})`)
-                    //- button(type="button").roomCard__punktButton
-                //- li.roomCard__photo(style=`background-image: url(${img_src1})`)
-                    //- div.roomCard__photo(style=`background-image: url(${img_src1})`)
-                    //- button(type="button").roomCard__punktButton
                 each listElement in listElements
                      li.roomCard__photo(style=`background-image: url(${listElement})`)
             ul.roomCard__punktMarkList
                 each listElement in listElements
                     li.roomCard__punktMark
-                //- li.roomCard__punktMark
             button(type="button").roomCard__scrollButton.roomCard__scrollButton--left
             button(type="button").roomCard__scrollButton.roomCard__scrollButton--right
         div.roomCard__roomInfo

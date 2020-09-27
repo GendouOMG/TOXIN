@@ -1,0 +1,50 @@
+@import "style.scss";
+
+
+.headerWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 50;
+}
+
+.landingWrapper {
+    margin: 0;
+    padding: 69px 0 0 0;
+    height: 830px;
+
+    background-image: url(img/landing/landingBackground.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.orderRoomWrapper {
+    margin: 70px auto 0 auto;
+    padding: 0 0 0 140px;
+
+    max-width: 1440px;
+}
+
+.footerWrapper {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: $desktop-width) {
+
+}
+
+@media (max-width: $tablet-width) {
+    .orderRoomWrapper {
+        margin: 70px auto 0 auto;
+        padding: 0;
+
+        display: flex;
+        justify-content: space-around;
+    
+        max-width: $tablet-width;
+    }
+}

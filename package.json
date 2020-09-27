@@ -1,10 +1,11 @@
 {
-  "name": "Parcel_first_test",
+  "name": "toxin",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.pug --open",
+    "start1": "parcel src/landing.pug --open",
     "build": "parcel build src/index.pug -d docs --public-url ./"
   },
   "keywords": [],

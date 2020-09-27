@@ -1,0 +1,51 @@
+include ../../gradientButton/gradientButton
+
+- let regTrigger = 0;
+
+header.defaultHeader
+    //- +borderGradientButton("Login")
+    //- +fullGradientButton("Register")
+    div.defaultHeader__innerWrapper.warpper
+        a.defaultHeader__logoLink(href="#")
+            img.defaultHeader__logo(src="/img/ToxinLogo.svg", alt="Logo")
+
+        nav.defaultHeader__nav
+            ul.defaultHeader__navList
+                li.defaultHeader__navElement.text_Casual.defaultHeader__navElement--current
+                    a.defaultHeader__navLink(href="#")="О\u00A0нас"
+                li.defaultHeader__navElement.text_Casual
+                    a.defaultHeader__navLink(href="#")="Услуги"
+                    span.defaultHeader__arrowDown
+                    ul.defaultHeader__innerList
+                        li.defaultHeader__innerElement
+                            a.defaultHeader__innerLink(href="#")="Одиночные\u00A0номера"
+                        li.defaultHeader__innerElement
+                            a.defaultHeader__innerLink(href="#")="Двуместные\u00A0номера"
+                        li.defaultHeader__innerElement
+                            a.defaultHeader__innerLink(href="#")="Апартаменты"
+                        li.defaultHeader__innerElement.text_Casual
+                            a.defaultHeader__innerLink(href="#")="Ресторан"
+                li.defaultHeader__navElement.text_Casual
+                    a.defaultHeader__navLink(href="#")="Вакансии"
+                li.defaultHeader__navElement.text_Casual
+                    a.defaultHeader__navLink(href="#")="Новости"
+                li.defaultHeader__navElement.text_Casual
+                    a.defaultHeader__navLink(href="#")="Соглашения"
+                    span.defaultHeader__arrowDown
+                    ul.defaultHeader__innerList
+                        li.defaultHeader__innerElement.text_Casual
+                            a.defaultHeader__innerLink(href="#")="Условия обслуживания"
+                        li.defaultHeader__innerElement.text_Casual
+                            a.defaultHeader__innerLink(href="#")="Договор"
+                //- li.defaultHeader__navElement.text_Casual
+                //-     +gradientButton("войти")
+                //- li.defaultHeader__navElement.text_Casual
+                //-     +gradientButton("зарегистрироваться","transparent","#FFFFFF")
+                //- li.defaultHeader__navElement.text_Casual.defaultHeader__navElement--userName="Юлий Цезарь"
+                if(regTrigger)
+                    li.defaultHeader__navElement.text_Casual.defaultHeader__navElement--userName="Юлий Цезарь"
+                else 
+                    li.defaultHeader__navElement.text_Casual
+                        +gradientButton("войти")
+                    li.defaultHeader__navElement.text_Casual
+                        +gradientButton("зарегистрироваться","transparent","#FFFFFF")
