@@ -1,13 +1,14 @@
 include ../../inputTextField/inputTextField
 include ../../toggleCheckboxList/toggleCheckboxList
 include ../../borderGradientButton/borderGradientButton
+include ../../fullGradientButtonWithArrow/fullGradientButtonWithArrow
 
 form.signIn
     h2.signIn__headline.headline_N1="Войти"
     div.signIn__inputTextField
-        +inputTextField("Фамилия")
+        +inputTextField("Email")
     div.signIn__inputTextField
-        +inputTextField("Фамилия")
+        +inputTextField("Пароль")
     div.signIn__fullGradientButtonWithArrow
         +fullGradientButtonWithArrow("Войти")
     div.signIn__newAccount.text_Casual

@@ -10,6 +10,7 @@ header.defaultHeader
             img.defaultHeader__logo(src="/img/ToxinLogo.svg", alt="Logo")
 
         nav.defaultHeader__nav
+            span.defaultHeader__burger
             ul.defaultHeader__navList
                 li.defaultHeader__navElement.text_Casual.defaultHeader__navElement--current
                     a.defaultHeader__navLink(href="#")="О\u00A0нас"
@@ -49,3 +50,6 @@ header.defaultHeader
                         +gradientButton("войти")
                     li.defaultHeader__navElement.text_Casual
                         +gradientButton("зарегистрироваться","transparent","#FFFFFF")
+
+//- script
+//-       include defaultHeader.js

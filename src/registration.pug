@@ -1,0 +1,36 @@
+- let signInTrigger = false;
+
+doctype html
+
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width,initial-scale=1")
+		link(href="registration.scss", rel="stylesheet")
+
+	body
+
+		div.headerWrapper
+			include includes/defaultHeader/defaultHeader
+		div.registrationWrapper
+			if(signInTrigger)
+				div.signInWrapper
+					include includes/signIn/signIn
+			else
+				div.newRegistrationWrapper
+					include includes/newRegistration/newRegistration
+		div.footerWrapper
+			include includes/defaultFooter/defaultFooter
+
+
+		script(src="https://code.jquery.com/jquery-3.5.1.min.js")
+		script(src="/hiddenCheckboxList/hiddenCheckboxList.js")
+		script(src="/itemQuantityDropdown/itemQuantityDropdown.js")
+		script(src="/roomContainDropdown/roomContainDropdown.js")
+		script(src="/AirDatepicker/js/datepicker.js")
+		script(src="/roomCard/roomCard.js")
+		script(src="/includes/defaultHeader/defaultHeader.js")
+		
+
+
+	

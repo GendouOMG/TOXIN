@@ -58,3 +58,21 @@
 
     width: 99px;
 }
+
+@media (max-width: $desktop-width) {
+
+}
+
+@media (max-width: $tablet-width) {
+    .newRegistration {
+        margin: 0;
+        padding: 19px 9px 10px 9px;
+        max-width: 320px;
+    
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        // box-sizing: border-box;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+    }
+}

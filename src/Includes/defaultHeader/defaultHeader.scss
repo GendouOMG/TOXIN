@@ -135,6 +135,10 @@
     text-decoration: none;
 }
 
+.defaultHeader__burger {
+    display: none;
+}
+
 ///
 
 // .defaultHeader__navElement:last-child {
@@ -204,4 +208,138 @@
         margin-left: 10px;
     }
 
+    .defaultHeader__burger {
+        display: none;
+    }
+
+}
+
+@media (max-width: $tablet-width) {
+
+    .defaultHeader {
+        height: 45px;
+    }
+
+    // .defaultHeader__innerWrapper {}
+
+    .defaultHeader__navList {
+        display: none;
+    }
+
+    .defaultHeader__logoLink {
+        z-index: 5;
+    }
+
+    .defaultHeader__burger {
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+
+        display: block;
+        width: 30px;
+        height: 28px;
+
+        position: relative;
+
+        border-top: 3px solid opacify($DarkShade, 0.75);
+
+        z-index: 5;
+    }
+
+    .defaultHeader__navElement{
+        margin: 0;
+        padding: 5px 0;
+        display: flex;
+        justify-content: center;
+
+        +.defaultHeader__navElement{
+            margin-left: 0;
+            border-top: 1px solid opacify($DarkShade, 0.25);
+        }
+    }
+
+    .defaultHeader__arrowDown {
+        display: none;
+    }
+
+    .defaultHeader__innerList{
+        display: none;
+    }
+
+    .defaultHeader__navElement--current {
+        margin: 0;
+        padding: 5px 0;
+
+    }
+
+    .defaultHeader__burger::before {
+        content: '';
+
+        position: absolute;
+        top: 8px;
+        left: 0px;
+    
+        margin: 0;
+        padding: 0;
+    
+        width: 100%;
+        height: 8px;
+        
+        border-top: 3px solid opacify($DarkShade, 0.75);
+        border-bottom: 3px solid opacify($DarkShade, 0.75);
+    }
+
+    .defaultHeader__burger.active {
+        border: none;
+    }
+
+    .defaultHeader__burger.active::before {
+        border-bottom: none;
+
+        top: 10px;
+        left: auto;
+        right: 3px;
+
+        transform: rotate(45deg);
+    }
+
+    .defaultHeader__burger.active::after {
+        content: '';
+
+        position: absolute;
+        top: 10px;
+        left: 3px;
+    
+        margin: 0;
+        padding: 0;
+    
+        width: 100%;
+        height: 8px;
+
+        border-top: 3px solid opacify($DarkShade, 0.75);
+
+        transform: rotate(-45deg);
+    }
+
+    .defaultHeader__navList.active {
+        padding: 60px 0 0 0;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        background-color: #FFFFFF;
+    }
+
+
+
+    .defaultHeader__navElement:hover .defaultHeader__innerList {
+        display: none;
+    }
+    
+    .defaultHeader__innerList:hover {
+        display: none;
+    }
+    
 }

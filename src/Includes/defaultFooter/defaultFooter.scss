@@ -112,10 +112,14 @@
 }
 
 .defaultFooter__socialWrapper {
+    margin: 0 auto;
+    padding: 0 140px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    max-width: 1160px;
     height: 100%;
 }
 
@@ -124,7 +128,7 @@
     padding: 0;
     
 
-    color: opacify($DarkShade, 0.75);;
+    color: opacify($DarkShade, 0.75);
 }
 
 .defaultFooter__socialNetList {
@@ -162,3 +166,89 @@
     display: block;
 }
 
+@media (max-width: $desktop-width) {
+    .defaultFooter__main {
+        padding: 0 20px;   
+    }
+
+    .defaultFooter__socialWrapper {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: $tablet-width) {
+
+    .defaultFooter__main {
+        margin: 120px auto 0 auto;
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        max-width: 1160px;
+    }
+
+    .defaultFooter__about {
+        margin: 0;
+        padding: 0;
+    
+        width: auto;
+    }
+
+    .defaultFooter__logo {
+        margin: 0 0 14px -5px;
+        padding: 0;
+    
+        width: 106px;
+        height: 40px;
+    }
+
+    .defaultFooter__caption {
+        display: none;
+    }
+
+    .defaultFooter__nav {
+        display: none;
+    }
+
+    .defaultFooter__subscription {
+        display: none;
+    }
+
+
+    .defaultFooter__social {
+        margin: 0;
+        padding: 0 0 120px 0;
+        
+        width: 100%;
+        height: 71px;
+    
+        border-top: none;
+    }
+
+    .defaultFooter__socialWrapper {
+        margin: 0;
+        padding: 0;
+
+        display: block;
+        height: auto;
+    }
+
+    .defaultFooter__copyright {
+        margin: 0;
+        text-align: center;
+    }
+
+    .defaultFooter__socialNetList {
+        margin: 23px 0 0 0;
+        padding: 0;
+    
+        display: flex;
+        justify-content: center;
+
+        list-style: none;
+        text-decoration: none;
+    }
+
+}
