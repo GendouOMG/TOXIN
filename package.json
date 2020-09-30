@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/landing.pug --open",
     "start1": "parcel src/searchPage.pug --open",
-    "build": "parcel build src/searchPage.pug -d docs --public-url ./"
+    "build": "parcel build src/signInPage.pug -d docs --public-url ./"
   },
   "keywords": [],
   "author": "",

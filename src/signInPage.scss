@@ -1,0 +1,34 @@
+@import "style.scss";
+
+.registrationWrapper {
+    margin: 0;
+    padding: 69px 0 0 0;
+
+    background-image: url(img/registration/registrationBackground.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .newRegistrationWrapper {
+        margin: 0;
+        padding: 19px 0;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .signInWrapper {
+        margin: 0;
+        padding: 172px 0;
+
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: $desktop-width) {
+
+}
+
+@media (max-width: $tablet-width) {
+
+}
