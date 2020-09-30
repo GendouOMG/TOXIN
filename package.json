@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/landing.pug --open",
+    "start": "parcel src/index.pug --open",
     "start1": "parcel src/searchPage.pug --open",
     "build": "parcel build src/signInPage.pug -d docs --public-url ./"
   },
