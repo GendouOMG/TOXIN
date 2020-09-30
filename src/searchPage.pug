@@ -1,0 +1,190 @@
+doctype html
+
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width,initial-scale=1")
+		link(href="searchPage.scss", rel="stylesheet")
+
+	body
+		div.headerWrapper
+			include includes/defaultHeader/defaultHeader
+
+		div.searchPage__wrapper
+			div.searchPage__filters
+				div.searchPage__dateSplitDropdownWrapper
+					include includes/dateSplitDropdown/dateSplitDropdown
+
+				h3.searchPage__filterHeadline.headline_N3="даты пребывания в отеле"
+				include defaultDpopdown/defaultDpopdown
+				div.searchPage__defaultDpopdownWrapper
+					+defaultDpopdown("Дата пребывания")
+
+				h3.searchPage__filterHeadline.headline_N3="гости"
+				include guestQuantityDropdown/guestQuantityDropdown
+				div.searchPage__guestQuantityDropdownWrapper
+					+guestQuantityDropdown(1,0,2)
+
+				h3.searchPage__filterHeadline.headline_N3="Checkbox Buttons"
+				include checkboxButtons/checkboxButtons
+				div.searchPage__checkboxButtonsWrapper
+					+checkboxButtons("Можно курить")
+				div.searchPage__checkboxButtonsWrapper
+					+checkboxButtons("Можно с питомцами")
+				div.searchPage__checkboxButtonsWrapper
+					+checkboxButtons("Можно пригласить гостей (до 10 человек)")
+
+				h3.searchPage__filterHeadline.headline_N3="удобства номера"
+				include roomContainDropdown/roomContainDropdown
+				div.searchPage__roomContainDropdownWrapper
+					+roomContainDropdown
+
+				include hiddenCheckboxList/hiddenCheckboxList
+				div.searchPage__hiddenCheckboxListWrapper
+					+hiddenCheckboxList("дополнительные удобства", "Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь")
+
+			div.searchPage__searchResultWpapper
+				h3.searchPage__searchResultHeadline.headline_N1="Номера, которые мы для вас подобрали"
+			
+				div.searchPage__searchResult
+					include roomCard/roomCard
+					div.searchPage__roomCardWrapper
+						+roomCard(888,
+						"Люкс",
+						"9 990₽",
+						"cardsStar1",
+						5,
+						145,
+						'img/roomCard/roomPhoto-1.jpg',
+						'img/roomCard/roomPhoto-2.jpg',
+						'img/roomCard/roomPhoto-3.jpg')
+					div.searchPage__roomCardWrapper
+						+roomCard(888,
+						"Люкс",
+						"9 990₽",
+						"cardsStar2",
+						3,
+						145,
+						'img/roomCard/roomPhoto-2.jpg',
+						'img/roomCard/roomPhoto-3.jpg',
+						'img/roomCard/roomPhoto-4.jpg')
+					div.searchPage__roomCardWrapper
+						+roomCard(888,
+						"Люкс",
+						"9 990₽",
+						"cardsStar3",
+						1,
+						144,
+						'img/roomCard/roomPhoto-3.jpg',
+						'img/roomCard/roomPhoto-4.jpg',
+						'img/roomCard/roomPhoto-5.jpg')
+					div.searchPage__roomCardWrapper
+						+roomCard(888,
+						"Люкс",
+						"9 990₽",
+						"cardsStar4",
+						4,
+						143,
+						'img/roomCard/roomPhoto-4.jpg',
+						'img/roomCard/roomPhoto-5.jpg',
+						'img/roomCard/roomPhoto-6.jpg')
+					div.searchPage__roomCardWrapper
+						+roomCard(888,
+						"Люкс",
+						"9 990₽",
+						"cardsStar5",
+						3,
+						142,
+						'img/roomCard/roomPhoto-5.jpg',
+						'img/roomCard/roomPhoto-6.jpg',
+						'img/roomCard/roomPhoto-7.jpg')
+					div.searchPage__roomCardWrapper
+						+roomCard(888,
+						"Люкс",
+						"9 990₽",
+						"cardsStar6",
+						3,
+						141,
+						'img/roomCard/roomPhoto-6.jpg',
+						'img/roomCard/roomPhoto-7.jpg',
+						'img/roomCard/roomPhoto-8.jpg')
+					div.searchPage__roomCardWrapper
+						+roomCard(888,
+						"Люкс",
+						"9 990₽",
+						"cardsStar7",
+						4,
+						14,
+						'img/roomCard/roomPhoto-7.jpg',
+						'img/roomCard/roomPhoto-8.jpg',
+						'img/roomCard/roomPhoto-9.jpg')
+					div.searchPage__roomCardWrapper
+						+roomCard(888,
+						"Люкс",
+						"9 990₽",
+						"cardsStar8",
+						5,
+						1450,
+						'img/roomCard/roomPhoto-8.jpg',
+						'img/roomCard/roomPhoto-9.jpg',
+						'img/roomCard/roomPhoto-10.jpg')
+					div.searchPage__roomCardWrapper
+						+roomCard(888,
+						"Люкс",
+						"9 990₽",
+						"cardsStar9",
+						2,
+						155,
+						'img/roomCard/roomPhoto-9.jpg',
+						'img/roomCard/roomPhoto-10.jpg',
+						'img/roomCard/roomPhoto-11.jpg')
+					div.searchPage__roomCardWrapper
+						+roomCard(888,
+						"Люкс",
+						"9 990₽",
+						"cardsStar10",
+						5,
+						245,
+						'img/roomCard/roomPhoto-10.jpg',
+						'img/roomCard/roomPhoto-11.jpg',
+						'img/roomCard/roomPhoto-12.jpg')
+					div.searchPage__roomCardWrapper
+						+roomCard(888,
+						"Люкс",
+						"9 990₽",
+						"cardsStar11",
+						1,
+						345,
+						'img/roomCard/roomPhoto-11.jpg',
+						'img/roomCard/roomPhoto-12.jpg',
+						'img/roomCard/roomPhoto-1.jpg')
+					div.searchPage__roomCardWrapper
+						+roomCard(888,
+						"Люкс",
+						"9 990₽",
+						"cardsStar12",
+						5,
+						154,
+						'img/roomCard/roomPhoto-12.jpg',
+						'img/roomCard/roomPhoto-1.jpg',
+						'img/roomCard/roomPhoto-2.jpg')
+				include pagination/pagination
+				div.searchPage__paginationWrapper
+					+pagination(1,15,'1 – 12 из 100+ вариантов аренды')
+
+		div.footerWrapper
+			include includes/defaultFooter/defaultFooter
+
+
+		script(src="https://code.jquery.com/jquery-3.5.1.min.js")
+		script(src="/hiddenCheckboxList/hiddenCheckboxList.js")
+		script(src="/itemQuantityDropdown/itemQuantityDropdown.js")
+		script(src="/roomContainDropdown/roomContainDropdown.js")
+		script(src="/AirDatepicker/js/datepicker.js")
+		script(src="/roomCard/roomCard.js")
+		script(src="/includes/defaultHeader/defaultHeader.js")
+		script(src="/includes/dateSplitDropdown/dateSplitDropdown.js")
+		
+
+
+	

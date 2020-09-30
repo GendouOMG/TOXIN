@@ -1,0 +1,63 @@
+.dateSplitDropdown {
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+}
+
+.dateSplitDropdown__dateDropdownWrapper {
+    margin: 0;
+    padding: 0 0 5px 0;
+}
+
+.dateSplitDropdown__calendar {
+    display: none;
+
+    position: absolute;
+    z-index: 10;
+    background: #FFFFFF;
+}
+
+.datepicker-here {
+    cursor: pointer;
+    display: none;
+}
+
+.dateSplitDropdown__control {
+    margin: 0;
+    padding: 0 13px;
+
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    height: 56px;
+
+    position: relative;
+    top: -1px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid opacify($DarkShade, 0.25);
+    box-sizing: border-box;
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+
+    // z-index: 5;
+}
+
+.dateSplitDropdown__clearButton,
+.dateSplitDropdown__applyButton {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    outline: none;
+}
+
+.dateSplitDropdown__clearButton {
+    color: opacify($DarkShade, 0.5);
+}
+
+.dateSplitDropdown__applyButton {
+    color: opacify($Purple, 1);
+}

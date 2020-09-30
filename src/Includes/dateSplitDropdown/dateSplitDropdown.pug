@@ -1,0 +1,13 @@
+include ../../dateDropdown/dateDropdown
+
+div.dateSplitDropdown
+    div.dateSplitDropdown__dateDropdownWrapper
+        +dateDropdown("Прибытие","ДД.ММ.ГГГГ","Выезд","ДД.ММ.ГГГГ")
+    div.dateSplitDropdown__calendar
+        input.datepicker-here(type="text",
+            data-range="true",
+            data-inline="true",
+            data-multiple-dates-separator="")
+        div.dateSplitDropdown__control
+            button(type='button').dateSplitDropdown__clearButton.headline_N3="Очистить"
+            button(type='button').dateSplitDropdown__applyButton.headline_N3="Применить"

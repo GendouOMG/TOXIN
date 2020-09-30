@@ -692,7 +692,7 @@ body {
   background: #fff;
   border: 1px solid #dbdbdb;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 4px 4px 0 0;
   box-sizing: content-box;
   font-family: Montserrat, sans-serif;
   font-size: 12px;
@@ -1264,23 +1264,13 @@ body {
   margin: 0;
   padding: 0; }
 
-.defaultDpopdown__headline {
-  margin: 0;
-  padding: 0 0 5px 0;
-  font-family: Montserrat;
-  font-style: normal;
-  text-align: left;
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #1f2041; }
-
 .defaultDpopdown__content {
   margin: 0;
   padding: 0 0 0 14px;
   display: flex;
-  width: 320px;
+  min-width: 160px;
+  width: 100%;
+  max-width: 320px;
   height: 44px;
   position: relative;
   outline: none;
@@ -1317,7 +1307,6 @@ body {
   padding: 0;
   max-width: 320px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
   text-decoration: none; }
@@ -1325,6 +1314,9 @@ body {
 .dateDropdown__element {
   margin: 0;
   padding: 0;
+  min-width: 130px;
+  width: 100%;
+  max-width: 150px;
   list-style: none;
   text-decoration: none; }
 
@@ -1344,7 +1336,9 @@ body {
   margin: 0;
   padding: 0 0 4px 13px;
   display: flex;
-  width: 150px;
+  min-width: 130px;
+  width: 100%;
+  max-width: 150px;
   height: 44px;
   position: relative;
   outline: none;
@@ -1362,7 +1356,13 @@ body {
   box-sizing: border-box;
   border-radius: 4px; }
 
-.dateDropdown__arrowDown {
+.dateDropdown__content:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  box-sizing: border-box;
+  border-radius: 4px; }
+
+.dateDropdown__content::before {
+  content: '';
   margin: 0;
   padding: 0;
   position: absolute;
@@ -1375,11 +1375,6 @@ body {
   display: inline-block;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg); }
-
-.dateDropdown__content:hover {
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  box-sizing: border-box;
-  border-radius: 4px; }
 
 .filterDateDropdown {
   margin: 0;
@@ -2281,9 +2276,6 @@ body {
   z-index: 1;
   width: 120px; }
 
-.datepicker-here {
-  cursor: pointer; }
-
 .bulletList {
   margin: 0;
   padding: 0;
@@ -2745,8 +2737,8 @@ body {
   margin: 0 0 20px 0;
   padding: 0; }
 
-.searchRoom__dateDropdown {
-  margin: 0 0 20px 0;
+.searchRoom__dateSplitDropdown {
+  margin: 0 0 15px 0;
   padding: 0; }
 
 .searchRoom__guestQuantityDropdownHeadline {
@@ -2877,8 +2869,8 @@ body {
   font-weight: 700;
   color: rgba(31, 32, 65, 0.5); }
 
-.orderRoom__dateDropdown {
-  margin: 20px 0 0 0;
+.orderRoom__dateSplitDropdown {
+  margin: 20px 0 -5px 0;
   padding: 0; }
 
 .orderRoom__guestQuantityDropdownHeadline {
@@ -3167,6 +3159,8 @@ body {
     display: none; } }
 
 @media (max-width: 768px) {
+  body.lock {
+    overflow: hidden; }
   .defaultHeader {
     height: 45px; }
   .defaultHeader__navList {
@@ -3235,6 +3229,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    overflow-y: auto;
     background-color: #FFFFFF; }
   .defaultHeader__navElement:hover .defaultHeader__innerList {
     display: none; }
@@ -3412,6 +3407,53 @@ body {
     justify-content: center;
     list-style: none;
     text-decoration: none; } }
+
+.dateSplitDropdown {
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+.dateSplitDropdown__dateDropdownWrapper {
+  margin: 0;
+  padding: 0 0 5px 0; }
+
+.dateSplitDropdown__calendar {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  background: #FFFFFF; }
+
+.datepicker-here {
+  cursor: pointer;
+  display: none; }
+
+.dateSplitDropdown__control {
+  margin: 0;
+  padding: 0 13px;
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  height: 56px;
+  position: relative;
+  top: -1px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 0 0 4px 4px;
+  border-top: none; }
+
+.dateSplitDropdown__clearButton,
+.dateSplitDropdown__applyButton {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  outline: none; }
+
+.dateSplitDropdown__clearButton {
+  color: rgba(31, 32, 65, 0.5); }
+
+.dateSplitDropdown__applyButton {
+  color: #bc9cff; }
 
 
 /*# sourceMappingURL=/style.97fcb138.css.map */

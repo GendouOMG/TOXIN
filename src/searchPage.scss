@@ -1,0 +1,127 @@
+@import "style.scss";
+
+.searchPage__wrapper {
+    margin: 0;
+    padding: 70px 140px 0 140px;
+
+    display: flex;
+    width: auto;
+
+    border-bottom: 1px solid opacify($DarkShade, 0.25);;
+}
+
+.searchPage__filters {
+    margin: 0;
+    padding: 0 60px 0 0;
+
+    width: 100%;
+    max-width: 266px;
+}
+
+.searchPage__dateSplitDropdownWrapper {
+    margin: 30px 0 0 0;
+    padding: 0;
+    width: 270px;
+    height: 70px;
+}
+
+.searchPage__defaultDpopdownWrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.searchPage__filterHeadline {
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+
+.searchPage__defaultDpopdownWrapper {
+    margin: 5px 0 0 0;
+    padding: 0; 
+}
+
+.searchPage__guestQuantityDropdownWrapper {
+    margin: 4px 0 0 0;
+    padding: 0;
+}
+
+.searchPage__checkboxButtonsWrapper {
+    margin: 17px 0 0 0;
+    padding: 0;
+    +.searchPage__checkboxButtonsWrapper{
+        margin: 12px 0 0 0;
+        padding: 0;
+    }
+}
+
+.searchPage__roomContainDropdownWrapper {
+    margin: 4px 0 0 0;
+    padding: 0;
+}
+
+.searchPage__hiddenCheckboxListWrapper {
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+
+////////////////
+.searchPage__searchResultWpapper {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+}
+
+.searchPage__searchResult {
+    margin: 0;
+    padding: 0;
+
+    display:  flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    width: 100%;
+}
+
+.searchPage__searchResultHeadline {
+    margin: 0;
+    padding: 30px 0 20px 0;
+}
+
+.searchPage__roomCardWrapper {
+    margin: 0 12px 20px 0;
+    padding: 0;
+}
+
+.searchPage__paginationWrapper {
+    margin: 40px 0 71px 0;
+    padding: 0;
+}
+
+/////////////////
+
+@media (max-width: $desktop-width) {
+
+}
+
+@media (max-width: $tablet-width) {
+    .searchPage__wrapper {
+        margin: 0;
+        padding: 50px 20px 0 20px;
+
+        display: block;
+    }
+
+    .searchPage__filters {
+        margin: 0;
+        padding: 0;
+    
+        width: 100%;
+        max-width: 266px;
+    }
+
+    .searchPage__paginationWrapper {
+        margin: 20px 0 20px 0;
+        padding: 0;
+    }
+}

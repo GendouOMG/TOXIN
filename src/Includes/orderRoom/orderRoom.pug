@@ -10,8 +10,8 @@ form.orderRoom
         p.orderRoom__costInfo 
             span.orderRoom__roomPrice="9 990₽"
             ="\u00A0в сутки"
-    div.orderRoom__dateDropdown
-        +dateDropdown("Прибытие","ДД.ММ.ГГГГ","Выезд","ДД.ММ.ГГГГ")
+    div.orderRoom__dateSplitDropdown
+        include ../dateSplitDropdown/dateSplitDropdown
     p.orderRoom__guestQuantityDropdownHeadline.headline_N3= "Гости"
     div.orderRoom__guestQuantityDropdown
         +guestQuantityDropdown(3,0,0)

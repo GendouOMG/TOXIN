@@ -5,8 +5,8 @@ include ../../fullGradientButtonWithArrow/fullGradientButtonWithArrow
 form.searchRoom
     h2.visually-hidden Поиск комнаты
     p.searchRoom__headline.headline_N1 Найдём номера под ваши пожелания
-    div.searchRoom__dateDropdown
-        +dateDropdown("Прибытие","ДД.ММ.ГГГГ","Выезд","ДД.ММ.ГГГГ")
+    div.searchRoom__dateSplitDropdown
+        include ../dateSplitDropdown/dateSplitDropdown
     p.searchRoom__guestQuantityDropdownHeadline.headline_N3= "Гости"
     div.searchRoom__guestQuantityDropdown
         +guestQuantityDropdown()

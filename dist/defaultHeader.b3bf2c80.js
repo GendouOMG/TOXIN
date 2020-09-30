@@ -122,6 +122,7 @@ $(document).ready(function () {
   $('.defaultHeader__burger').click(function (event) {
     $('.defaultHeader__burger').toggleClass('active');
     $('.defaultHeader__navList').toggleClass('active');
+    $('body').toggleClass('lock');
   });
 });
 },{}],"C:/Users/Alex/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -152,7 +153,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34630" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "16619" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
