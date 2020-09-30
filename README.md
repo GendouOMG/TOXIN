@@ -7,9 +7,10 @@
 ---
 
 #### Страницы
-- [Landing](https://gendouomg.github.io/TOXIN/docs/landing.html)
-- [Sign Up](https://gendouomg.github.io/TOXIN/docs/registration.html)
-- [Search Rooms](https://gendouomg.github.io/TOXIN/docs/searchPage.html)
+- [Landing](https://gendouomg.github.io/TOXIN/landing.html)
+- [Sign Up](https://gendouomg.github.io/TOXIN/registration.html)
+- [Sign In](https://gendouomg.github.io/TOXIN/signInPage.html)
+- [Search Rooms](https://gendouomg.github.io/TOXIN/searchPage.html)
 
 ---
 
