@@ -37,6 +37,18 @@ body {
   padding: 0 140px;
   max-width: 1160px; }
 
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50; }
+
+.footerWrapper {
+  margin: 0;
+  padding: 0; }
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -680,7 +692,7 @@ body {
   background: #fff;
   border: 1px solid #dbdbdb;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 4px 4px 0 0;
   box-sizing: content-box;
   font-family: Montserrat, sans-serif;
   font-size: 12px;
@@ -1252,23 +1264,13 @@ body {
   margin: 0;
   padding: 0; }
 
-.defaultDpopdown__headline {
-  margin: 0;
-  padding: 0 0 5px 0;
-  font-family: Montserrat;
-  font-style: normal;
-  text-align: left;
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #1f2041; }
-
 .defaultDpopdown__content {
   margin: 0;
   padding: 0 0 0 14px;
   display: flex;
-  width: 320px;
+  min-width: 160px;
+  width: 100%;
+  max-width: 320px;
   height: 44px;
   position: relative;
   outline: none;
@@ -1305,7 +1307,6 @@ body {
   padding: 0;
   max-width: 320px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
   text-decoration: none; }
@@ -1313,6 +1314,9 @@ body {
 .dateDropdown__element {
   margin: 0;
   padding: 0;
+  min-width: 130px;
+  width: 100%;
+  max-width: 150px;
   list-style: none;
   text-decoration: none; }
 
@@ -1332,7 +1336,9 @@ body {
   margin: 0;
   padding: 0 0 4px 13px;
   display: flex;
-  width: 150px;
+  min-width: 130px;
+  width: 100%;
+  max-width: 150px;
   height: 44px;
   position: relative;
   outline: none;
@@ -1350,7 +1356,13 @@ body {
   box-sizing: border-box;
   border-radius: 4px; }
 
-.dateDropdown__arrowDown {
+.dateDropdown__content:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  box-sizing: border-box;
+  border-radius: 4px; }
+
+.dateDropdown__content::before {
+  content: '';
   margin: 0;
   padding: 0;
   position: absolute;
@@ -1363,11 +1375,6 @@ body {
   display: inline-block;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg); }
-
-.dateDropdown__content:hover {
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  box-sizing: border-box;
-  border-radius: 4px; }
 
 .filterDateDropdown {
   margin: 0;
@@ -2269,9 +2276,6 @@ body {
   z-index: 1;
   width: 120px; }
 
-.datepicker-here {
-  cursor: pointer; }
-
 .bulletList {
   margin: 0;
   padding: 0;
@@ -2733,8 +2737,8 @@ body {
   margin: 0 0 20px 0;
   padding: 0; }
 
-.searchRoom__dateDropdown {
-  margin: 0 0 20px 0;
+.searchRoom__dateSplitDropdown {
+  margin: 0 0 15px 0;
   padding: 0; }
 
 .searchRoom__guestQuantityDropdownHeadline {
@@ -2801,6 +2805,16 @@ body {
   padding: 0;
   width: 99px; }
 
+@media (max-width: 768px) {
+  .newRegistration {
+    margin: 0;
+    padding: 19px 9px 10px 9px;
+    max-width: 320px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px; } }
+
 .orderRoom {
   margin: 0;
   padding: 39px 29px 29px 29px;
@@ -2855,8 +2869,8 @@ body {
   font-weight: 700;
   color: rgba(31, 32, 65, 0.5); }
 
-.orderRoom__dateDropdown {
-  margin: 20px 0 0 0;
+.orderRoom__dateSplitDropdown {
+  margin: 20px 0 -5px 0;
   padding: 0; }
 
 .orderRoom__guestQuantityDropdownHeadline {
@@ -2988,6 +3002,16 @@ body {
   position: relative;
   top: 1px; }
 
+@media (max-width: 768px) {
+  .signIn {
+    margin: 0;
+    padding: 19px 5px 12px 5px;
+    max-width: 320px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px; } }
+
 .defaultHeader {
   margin: 0;
   padding: 0;
@@ -3085,6 +3109,9 @@ body {
   color: inherit;
   text-decoration: none; }
 
+.defaultHeader__burger {
+  display: none; }
+
 .defaultHeader__navElement + .defaultHeader__navElement {
   margin-left: 20px; }
 
@@ -3127,7 +3154,87 @@ body {
   .defaultHeader__innerWrapper {
     padding: 0 20px; }
   .defaultHeader__navElement + .defaultHeader__navElement {
-    margin-left: 10px; } }
+    margin-left: 10px; }
+  .defaultHeader__burger {
+    display: none; } }
+
+@media (max-width: 768px) {
+  body.lock {
+    overflow: hidden; }
+  .defaultHeader {
+    height: 45px; }
+  .defaultHeader__navList {
+    display: none; }
+  .defaultHeader__logoLink {
+    z-index: 5; }
+  .defaultHeader__burger {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 30px;
+    height: 28px;
+    position: relative;
+    border-top: 3px solid rgba(31, 32, 65, 0.75);
+    z-index: 5; }
+  .defaultHeader__navElement {
+    margin: 0;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center; }
+    .defaultHeader__navElement + .defaultHeader__navElement {
+      margin-left: 0;
+      border-top: 1px solid rgba(31, 32, 65, 0.25); }
+  .defaultHeader__arrowDown {
+    display: none; }
+  .defaultHeader__innerList {
+    display: none; }
+  .defaultHeader__navElement--current {
+    margin: 0;
+    padding: 5px 0; }
+  .defaultHeader__burger::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 8px;
+    border-top: 3px solid rgba(31, 32, 65, 0.75);
+    border-bottom: 3px solid rgba(31, 32, 65, 0.75); }
+  .defaultHeader__burger.active {
+    border: none; }
+  .defaultHeader__burger.active::before {
+    border-bottom: none;
+    top: 10px;
+    left: auto;
+    right: 3px;
+    transform: rotate(45deg); }
+  .defaultHeader__burger.active::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 3px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 8px;
+    border-top: 3px solid rgba(31, 32, 65, 0.75);
+    transform: rotate(-45deg); }
+  .defaultHeader__navList.active {
+    padding: 60px 0 0 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    background-color: #FFFFFF; }
+  .defaultHeader__navElement:hover .defaultHeader__innerList {
+    display: none; }
+  .defaultHeader__innerList:hover {
+    display: none; } }
 
 .defaultFooter {
   margin: 104px 0 0 0;
@@ -3212,9 +3319,12 @@ body {
   border-top: 1px solid rgba(31, 32, 65, 0.25); }
 
 .defaultFooter__socialWrapper {
+  margin: 0 auto;
+  padding: 0 140px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1160px;
   height: 100%; }
 
 .defaultFooter__copyright {
@@ -3247,13 +3357,103 @@ body {
   padding: 0;
   display: block; }
 
-.headerWrapper {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  z-index: 50; }
+@media (max-width: 1200px) {
+  .defaultFooter__main {
+    padding: 0 20px; }
+  .defaultFooter__socialWrapper {
+    padding: 0 20px; } }
+
+@media (max-width: 768px) {
+  .defaultFooter__main {
+    margin: 120px auto 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1160px; }
+  .defaultFooter__about {
+    margin: 0;
+    padding: 0;
+    width: auto; }
+  .defaultFooter__logo {
+    margin: 0 0 14px -5px;
+    padding: 0;
+    width: 106px;
+    height: 40px; }
+  .defaultFooter__caption {
+    display: none; }
+  .defaultFooter__nav {
+    display: none; }
+  .defaultFooter__subscription {
+    display: none; }
+  .defaultFooter__social {
+    margin: 0;
+    padding: 0 0 120px 0;
+    width: 100%;
+    height: 71px;
+    border-top: none; }
+  .defaultFooter__socialWrapper {
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: auto; }
+  .defaultFooter__copyright {
+    margin: 0;
+    text-align: center; }
+  .defaultFooter__socialNetList {
+    margin: 23px 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none; } }
+
+.dateSplitDropdown {
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+.dateSplitDropdown__dateDropdownWrapper {
+  margin: 0;
+  padding: 0 0 5px 0; }
+
+.dateSplitDropdown__calendar {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  background: #FFFFFF; }
+
+.datepicker-here {
+  cursor: pointer;
+  display: none; }
+
+.dateSplitDropdown__control {
+  margin: 0;
+  padding: 0 13px;
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  height: 56px;
+  position: relative;
+  top: -1px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 0 0 4px 4px;
+  border-top: none; }
+
+.dateSplitDropdown__clearButton,
+.dateSplitDropdown__applyButton {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  outline: none; }
+
+.dateSplitDropdown__clearButton {
+  color: rgba(31, 32, 65, 0.5); }
+
+.dateSplitDropdown__applyButton {
+  color: #bc9cff; }
 
 .landingWrapper {
   margin: 0;
@@ -3267,10 +3467,6 @@ body {
   margin: 70px auto 0 auto;
   padding: 0 0 0 140px;
   max-width: 1440px; }
-
-.footerWrapper {
-  margin: 0;
-  padding: 0; }
 
 @media (max-width: 768px) {
   .orderRoomWrapper {

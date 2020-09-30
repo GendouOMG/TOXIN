@@ -4,19 +4,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.pug --open",
+    "start": "parcel src/landing.pug --open",
     "start1": "parcel src/searchPage.pug --open",
-    "build": "parcel build src/index.pug -d docs --public-url ./"
+    "build": "parcel build src/searchPage.pug -d docs --public-url ./"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "pug": "^2.0.4"
   },
   "dependencies": {
     "autoprefixer": "^9.8.0",
     "postcss-modules": "^2.0.0"
   }
+  
 }

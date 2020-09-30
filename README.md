@@ -18,6 +18,10 @@
 * jQuery
 * БЭМ
 
+#### npm scripts
+* ```npm parcel --open``` — запускаем dev-server
+* ```parcel build --public-url``` — билдим
+
 #### Особенности выполненного задания
 * Самостоятельно настроенный Parcel
 * Pixel Perfect
