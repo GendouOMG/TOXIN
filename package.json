@@ -14,7 +14,7 @@
   "description": "",
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "dependencies": {
     "autoprefixer": "^9.8.0",
